@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>51单片机总结 | bibibi的小站</title><meta name="keywords" content="嵌入式"><meta name="author" content="遗世雨"><meta name="copyright" content="遗世雨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="51 单片机总结  MCS51 单片机硬件基础 Keil 集成开发环境 C51 知识 硬件知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="51单片机总结">
+<meta property="og:url" content="http://yishiyu.github.io/2020/11/13/51%E5%8D%95%E7%89%87%E6%9C%BA%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="bibibi的小站">
+<meta property="og:description" content="51 单片机总结  MCS51 单片机硬件基础 Keil 集成开发环境 C51 知识 硬件知识">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img.yishiyu.world/blogs/cover/post.jpg">
+<meta property="article:published_time" content="2020-11-13T02:08:25.000Z">
+<meta property="article:modified_time" content="2020-11-13T02:24:31.518Z">
+<meta property="article:author" content="遗世雨">
+<meta property="article:tag" content="嵌入式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img.yishiyu.world/blogs/cover/post.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yishiyu.github.io/2020/11/13/51%E5%8D%95%E7%89%87%E6%9C%BA%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁体","msgToSimplifiedChinese":"简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 遗世雨","link":"链接: ","source":"来源: bibibi的小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2020-11-13 10:24:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">51单片机总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-13T02:08:25.000Z" title="发表于 2020-11-13 10:08:25">2020-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-13T02:24:31.518Z" title="更新于 2020-11-13 10:24:31">2020-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="51-单片机总结"><a href="#51-单片机总结" class="headerlink" title="51 单片机总结"></a>51 单片机总结</h1><blockquote>
+<ol>
+<li>MCS51 单片机硬件基础</li>
+<li>Keil 集成开发环境</li>
+<li>C51 知识</li>
+<li>硬件知识</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="1-MCS51-单片机硬件基础"><a href="#1-MCS51-单片机硬件基础" class="headerlink" title="1. MCS51 单片机硬件基础"></a>1. MCS51 单片机硬件基础</h2><h3 id="1-1-硬件结构与引脚"><a href="#1-1-硬件结构与引脚" class="headerlink" title="1.1 硬件结构与引脚"></a>1.1 硬件结构与引脚</h3><img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-1.png">
+
+<p>引脚功能</p>
+<table>
+<thead>
+<tr>
+<th align="left">引脚</th>
+<th align="left">全称</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">VCC</td>
+<td align="left">voltage circuit</td>
+<td align="left">电源端</td>
+</tr>
+<tr>
+<td align="left">GND</td>
+<td align="left">ground</td>
+<td align="left">接地端</td>
+</tr>
+<tr>
+<td align="left">VSS</td>
+<td align="left">voltage series</td>
+<td align="left">公共链接端</td>
+</tr>
+<tr>
+<td align="left">XTAL1</td>
+<td align="left">External Crystal Oscillator 1</td>
+<td align="left">连接外部石英晶体和微调电容或者震荡信号</td>
+</tr>
+<tr>
+<td align="left">XTAL2</td>
+<td align="left">External Crystal Oscillator 2</td>
+<td align="left">同上</td>
+</tr>
+<tr>
+<td align="left">RST/VPD</td>
+<td align="left">Reset/voltage device</td>
+<td align="left">复位信号/备用电源</td>
+</tr>
+<tr>
+<td align="left">ALE/-PROG</td>
+<td align="left">Address Latch Enable/Program</td>
+<td align="left">地址锁存信号/编程脉冲引脚</td>
+</tr>
+<tr>
+<td align="left">-PSEN</td>
+<td align="left">Programmer Saving Enable</td>
+<td align="left">外部程序存储器读选通</td>
+</tr>
+<tr>
+<td align="left">-EA/VPP</td>
+<td align="left">enable/voltage program</td>
+<td align="left">访问程序存储器控制信号/编程模式信号</td>
+</tr>
+<tr>
+<td align="left">Px</td>
+<td align="left">port x</td>
+<td align="left">IO 引脚</td>
+</tr>
+</tbody></table>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-2.png">
+
+<h3 id="1-2-时钟信号"><a href="#1-2-时钟信号" class="headerlink" title="1.2 时钟信号"></a>1.2 时钟信号</h3><img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-3.png">
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">参考自:https://zhuanlan.zhihu.com/p/72583737</span><br><span class="line">晶振有一个重要的参数，那就是负载电容值，选择与负载电容值相等的并联电容，就可以得到晶振标称的谐振频率。</span><br><span class="line">一般的晶振振荡电路都是在一个反相放大器（注意是放大器不是反相器）的两端接入晶振，再有两个电容分别接到晶振的两端，每个电容的另一端再接到地，这两个电容串联的容量值就应该等于负载电容，请注意一般IC的引脚都有等效输入电容，这个不能忽略。</span><br><span class="line"></span><br><span class="line">一般的晶振的负载电容为15p或12.5p ，如果再考虑元件引脚的等效输入电容，则两个22p的电容构成晶振的振荡电路就是比较好的选择。负载电容+等效输入电容=22pF。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>震荡周期:震荡源的震荡周期,是时序中的最小单位<br>时钟周期:震荡源信号二分频后的时钟脉冲信号周期<br>机器周期:一个机器周期等于 6 个时钟周期,通常用内存中读取一个指令字的最短时间来规定 CPU 周期<br>指令周期:CPU 执行一个指令的周期,通常包含 1~4 个机器周期,通常取指令一个机器周期,执行指令包含若干机器周期</p>
+</blockquote>
+<h3 id="1-3-存储器结构"><a href="#1-3-存储器结构" class="headerlink" title="1.3 存储器结构"></a>1.3 存储器结构</h3><img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-7.png">
+
+<p>单片机内程序与数据分开存放,分别有内部/外部两个存储器</p>
+<h4 id="1-3-1-程序存储器"><a href="#1-3-1-程序存储器" class="headerlink" title="1.3.1 程序存储器"></a>1.3.1 程序存储器</h4><p>51 单片机内部总线为 16 位,可寻址空间为 64kb,其中内部存储器有 4kb<br>-EA 引脚接高点平时从内部存储器启动(0-4kb 使用内部存储,4kb-64kb 使用外部存储)<br>-EA 引脚接低电平时从外部存储器启动(0-64kb 都使用外部存储)</p>
+<p>有两个特殊存储位置:</p>
+<table>
+<thead>
+<tr>
+<th align="left">位置</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0000H~0002H</td>
+<td align="left">起始指令,通常是跳转语句</td>
+</tr>
+<tr>
+<td align="left">0003H~000AH</td>
+<td align="left">外部中断 0 处理函数地址</td>
+</tr>
+<tr>
+<td align="left">000BH~0012H</td>
+<td align="left">计数器/定时器 0 处理函数地址</td>
+</tr>
+<tr>
+<td align="left">0013H~001AH</td>
+<td align="left">外部中断 1 处理函数地址</td>
+</tr>
+<tr>
+<td align="left">001BH~0012H</td>
+<td align="left">计数器/定时器 1 处理函数地址</td>
+</tr>
+<tr>
+<td align="left">0023H~002AH</td>
+<td align="left">串行通信中断处理函数地址</td>
+</tr>
+</tbody></table>
+<h4 id="1-3-2-数据存储器"><a href="#1-3-2-数据存储器" class="headerlink" title="1.3.2 数据存储器"></a>1.3.2 数据存储器</h4><p>51 单片机的数据存储器在逻辑和物理上都分为两个地址空间,分别使用 MOV 指令和 MOVX 指令访问</p>
+<p>对于 51 单片机,256 字节分为高 128 字节的特殊寄存器区(SFR 区)和低 128 字节的 RAM 区</p>
+<p>特殊寄存器区对用户来说是只读的(标记为*的可位寻址)</p>
+<table>
+<thead>
+<tr>
+<th align="left">寄存器</th>
+<th align="left">作用</th>
+<th align="left">寄存器</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">*ACC</td>
+<td align="left">累加器</td>
+<td align="left">*B</td>
+<td align="left">通用寄存器</td>
+</tr>
+<tr>
+<td align="left">*PSW</td>
+<td align="left">程序状态字寄存器</td>
+<td align="left">SP</td>
+<td align="left">栈指针寄存器</td>
+</tr>
+<tr>
+<td align="left">DPL</td>
+<td align="left">数据存储器指针低位</td>
+<td align="left">DPH</td>
+<td align="left">数据存储器指针高位</td>
+</tr>
+<tr>
+<td align="left">*P0</td>
+<td align="left">通道寄存器 0</td>
+<td align="left">*P1</td>
+<td align="left">通道寄存器 1</td>
+</tr>
+<tr>
+<td align="left">*P2</td>
+<td align="left">通道寄存器 2</td>
+<td align="left">*P3</td>
+<td align="left">通道寄存器 3</td>
+</tr>
+<tr>
+<td align="left">*IP</td>
+<td align="left">中断优先级寄存器</td>
+<td align="left">*IE</td>
+<td align="left">中断允许寄存器</td>
+</tr>
+<tr>
+<td align="left">TMOD</td>
+<td align="left">定时器模式寄存器</td>
+<td align="left">*TCON</td>
+<td align="left">定时器控制寄存器</td>
+</tr>
+<tr>
+<td align="left">TH0</td>
+<td align="left">定时器 0 高位</td>
+<td align="left">TL0</td>
+<td align="left">定时器 0 低位</td>
+</tr>
+<tr>
+<td align="left">TH1</td>
+<td align="left">定时器 1 高位</td>
+<td align="left">TL0</td>
+<td align="left">定时器 1 低位</td>
+</tr>
+<tr>
+<td align="left">*SCON</td>
+<td align="left">串口控制器</td>
+<td align="left">SBUF</td>
+<td align="left">串行数据缓冲器</td>
+</tr>
+<tr>
+<td align="left">PCON</td>
+<td align="left">电源控制及波特率选择</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p>RAM 区域是用户可用的内存,还可以分为三个部分</p>
+<table>
+<thead>
+<tr>
+<th align="left">RAM 区域</th>
+<th align="left">大小</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00H~1FH</td>
+<td align="left">32 bytes</td>
+<td align="left">寄存器组,分为 4 个寄存器组,每组有寄存器 R0~R7 8 个寄存器</td>
+</tr>
+<tr>
+<td align="left">20H~2FH</td>
+<td align="left">16 bytes</td>
+<td align="left">可寻址区,对应位寻址空间的 00~7FH</td>
+</tr>
+<tr>
+<td align="left">30H~7FH</td>
+<td align="left">80 bytes</td>
+<td align="left">一般 RAM 区</td>
+</tr>
+</tbody></table>
+<h3 id="1-4-定时器"><a href="#1-4-定时器" class="headerlink" title="1.4 定时器"></a>1.4 定时器</h3><p>定时器有两种工作方式:<br>定时器模式:每个机器周期计数加一,当定时器数值与 THL0/1 寄存器中数值相同时执行特定动作<br>计数器模式:接受 P3.4 和 P3.5 引脚上的脉冲,出现高-低跳变时计数加一</p>
+<p>TMOD 寄存器可以操控定时器的工作方式<br>TCON 定时器可以操控定时器的启动/复位/停止等动作</p>
+<h3 id="1-5-I-O-端口"><a href="#1-5-I-O-端口" class="headerlink" title="1.5 I/O 端口"></a>1.5 I/O 端口</h3><h4 id="1-5-1-并行接口"><a href="#1-5-1-并行接口" class="headerlink" title="1.5.1 并行接口"></a>1.5.1 并行接口</h4><p>51 单片机共 4 个并行接口,但是其各自的内部结构都不相同</p>
+<ol>
+<li><p>P0 端口</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-8.png">  
+<p>P0 口为漏极开路输出,所以在执行输出的时候必须外接上拉电阻(10K 即可)<br>执行输入的时候,首先要输出高电平</p>
+</blockquote>
+</li>
+<li><p>P1 端口</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-9.png">  
+<p>P1 端口自带一个上拉电阻,可以直接作为输出引脚<br>同时在读取外部引脚输入的时候,必须先向锁存器写入高电平,使场效应管 T 截止<br>否则读到的一定是低电平</p>
+</blockquote>
+</li>
+<li><p>P2 端口</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-10.png">  
+<p>P2 端口也有内部上拉电阻<br>其余功能与 P0,P1 类似</p>
+</blockquote>
+</li>
+<li><p>P3 端口</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-11.png">  
+<p>相比于其他端口,P3 端口可以支持第二功能<br>不同位的端口第二功能参考手册或引脚图</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="1-5-2-串行端口"><a href="#1-5-2-串行端口" class="headerlink" title="1.5.2 串行端口"></a>1.5.2 串行端口</h4><p>串行端口复用了 P3 端口的第二功能<br>使用 PCON 寄存器可以控制波特率,SCON 寄存器可以控制串行通信的过程<br>SBUF 寄存器用来存储发送/接受的数据,由两个独立的缓冲器组成</p>
+<h3 id="1-6-中断系统"><a href="#1-6-中断系统" class="headerlink" title="1.6 中断系统"></a>1.6 中断系统</h3><p>8051 一共可以处理 5 个中断源:2 个时钟中断,2 个外部中断,1 个串行通信中断<br>IE 寄存器用来控制中断处理的开启与关闭<br>IP 寄存器用来控制 5 个中断的优先级</p>
+<h3 id="1-7-总线"><a href="#1-7-总线" class="headerlink" title="1.7 总线"></a>1.7 总线</h3><ol>
+<li><p>数据总线</p>
+<blockquote>
+<p>51 单片机数据总线为 8 位,由 P0 端口提供</p>
+</blockquote>
+</li>
+<li><p>地址总线</p>
+<blockquote>
+<p>51 单片机地址总线为 16 位,由 P0(低位)和 P2(高位)共同提供<br>在访问时,P0 口首先提供地址低八位,然后由 ALE 锁存信号数据锁存到外部地址锁存器中<br>然后 P0 转为数据总线,准备接受数据</p>
+</blockquote>
+</li>
+<li><p>控制总线</p>
+<blockquote>
+<p>在读取外部程序存储器时,-PSEN(外部程序存储器选通信号)生效(低电平)<br>在读取外部数据存储器时,P3 口自动产生-RD/-WR 信号(P3.6 和 P3.7)</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="2-Keil-集成开发环境"><a href="#2-Keil-集成开发环境" class="headerlink" title="2. Keil 集成开发环境"></a>2. Keil 集成开发环境</h2><p>Keil 开发流程</p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/1-12.png">
+
+<p>其中 RTX51 是一种运行在 51 单片机上的实时操作系统</p>
+<h3 id="2-1-开发流程"><a href="#2-1-开发流程" class="headerlink" title="2.1 开发流程"></a>2.1 开发流程</h3><ol>
+<li><p>编写完源文件并将其添加到工程中</p>
+<blockquote>
+<p>编写源码文件,并将其添加到项目中</p>
+</blockquote>
+</li>
+<li><p>设置项目</p>
+<blockquote>
+<ol>
+<li><p>Target 选项卡</p>
+<ul>
+<li>Xtal(MHz):单片机 CPU 的工作频率,默认为最高频率</li>
+<li>Memory Model:数据存储空间类型-Small(变量存到内部 RAM 中),Compact(变量存到外部 RAM 中,使用 8 位间接寻址),Large(变量存到外部 RAM 中,使用 16 位间接寻址)</li>
+<li>Code Rom Size:代码存储空间类型-Small(程序不超过 2kb),Compact(函数不超过 2kb,整个程序可使用 64kb),Large(程序可以完全使用 64kb)</li>
+<li>Operating:使用的操作类型类型,Keil 提供了 RTX51 操作系统,默认为 None</li>
+<li>Off-Chip Code Memory:用于确定外接 ROM 的范围</li>
+<li>Off-Chip XData Memory:用于确定外接 RAM 的范围</li>
+</ul>
+</li>
+<li><p>Output 选项卡</p>
+<ul>
+<li>Select Folder for Objects:生成的目标文件文件夹</li>
+<li>Name of Executable:生成的目标文件名称</li>
+<li>Debug information:生成用于调试的信息</li>
+<li>Browse information:产生浏览信息</li>
+<li>Create HEX File:生成 HEX 文件</li>
+<li>Create Library:生成库文件</li>
+</ul>
+</li>
+<li><p>Listing 选项卡<br>调整生成的.list 文件选项,如可以设置生成汇编代码等</p>
+</li>
+<li><p>C51 选项卡<br>调整编译优化等级相关内容</p>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p>编译和链接(略)</p>
+</li>
+<li><p>仿真和调试</p>
+<blockquote>
+<p>Keil 提供了 dScope(Debug Scope)工具来进行调试<br>在项目设置中可以选择关于调试的一些配置:  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/dScope.png">
+
+<p>左侧为使用仿真进行调试,右侧为连接硬件调试</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-2-仿真与调试"><a href="#2-2-仿真与调试" class="headerlink" title="2.2 仿真与调试"></a>2.2 仿真与调试</h3><p>Keil 与 Proteus 可以联合调试<br>一共有两种操作方式:</p>
+<ul>
+<li>Proteus 绘制原理图并编写代码,利用 Keil 的编译器编译后调试</li>
+<li>Proteus 绘制原理图,Keil 编写代码,二者基于同一个端口进行通信并调试</li>
+</ul>
+<h4 id="2-2-1-Proteus-Keil-编译器"><a href="#2-2-1-Proteus-Keil-编译器" class="headerlink" title="2.2.1 Proteus+Keil 编译器"></a>2.2.1 Proteus+Keil 编译器</h4><img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-1.png">
+
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-2.png">
+
+<p>如上,建立完项目后,原理图中会自动生成一个单片机,同时多了一个源码窗口<br>编写完代码,构建项目(就是编译),然后调试即可<br>适合一些小项目,调试不太方便</p>
+<h4 id="2-2-2-Proteus-Keil"><a href="#2-2-2-Proteus-Keil" class="headerlink" title="2.2.2 Proteus+Keil"></a>2.2.2 Proteus+Keil</h4><p>首先需要一些准备工作(仅在首次使用时设置)</p>
+<blockquote>
+<ol>
+<li>把将 <code>$&#123;PROTEUS_HOME&#125;\MODELS\VDM51.dll</code> 复制到 keil 的目录 <code>$&#123;KEIL4&#125;\C51\BIN</code> 中,如果没有可以自行搜索并下载</li>
+<li>打开 <code>$&#123;KEIL4&#125;\TOOLS.INI</code> 在 <code>[c51]</code> 后面添加<code>TDRV5=BIN\VDM51.DLL (&quot;Proteus VSM Monitor-51 Driver&quot;)</code><br><strong>或者使用 <a target="_blank" rel="noopener" href="http://downloads.labcenter.co.uk/vdmagdi.exe">这个软件</a> 一步到位</strong></li>
+</ol>
+</blockquote>
+<ol>
+<li><p>正常建立 Proteus 项目  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-3.png">
+</li>
+<li><p>正常建立 Keil 项目(选择 80C51 作为 CPU)  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-4.png">
+</li>
+<li><p>编写 Keil 文件并编译  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-5.png">
+</li>
+<li><p>设置 Keil 调试模式为与 Proteus 联合调试(默认使用 8000 端口)  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-6.png">
+</li>
+<li><p>设置 Proteus 允许远程调试  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-7.png">
+</li>
+<li><p>在 Kiel 中启动调试后会自动在 Proteus 中进行仿真  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-8.png">
+
+</li>
+</ol>
+<h2 id="3-C51-知识"><a href="#3-C51-知识" class="headerlink" title="3. C51 知识"></a>3. C51 知识</h2><p>这一章内容参考自 Keil 中自带的教程中的 <code>Complete User&#39;s Guide Selection</code> 中的 <code>Cx51 Compiler User&#39;s Guide</code></p>
+<p>主要是 51 单片机的 C 语言对标准 C 语言的扩展</p>
+<p>除了下述内容,51 单片机还提供了一个 RTX 实时操作系统,详细可以参考<code>Complete User&#39;s Guide Selection</code>教程</p>
+<h3 id="3-1-内存扩展"><a href="#3-1-内存扩展" class="headerlink" title="3.1 内存扩展"></a>3.1 内存扩展</h3><p>首先是单片机内部的内存分布</p>
+<ol>
+<li>代码:代码存储器</li>
+<li>全局数据:通用内存中地址最低的部分</li>
+<li>局部数据:存放在运行时堆栈中</li>
+<li>堆栈空间:通用内存中全局数据上方,向上生长</li>
+</ol>
+<p>与大多数通用计算机把程序,数据放在同一个物理内存空间不同,51 单片机提供了拥有不同特性的几种存储空间</p>
+<ol>
+<li><p>Program Memory(程序内存)<br>只读内存,用来存储程序,静态数据也可以存进去以节省其他内存的空间<br>可以在声明变量的时候使用<code>code</code>关键字显式声明变量存储位置为程序内存<br><code>code int i=0;</code></p>
+</li>
+<li><p>Internal Data Memory(片内数据存储空间)<br>片内数据存储空间,分为两个部分:高位 128 字节,低位 128 字节</p>
+<ul>
+<li>高位 128 字节只能间接寻址,如果直接寻址的话会被映射到特殊寄存器(注意是映射,这里并不是真的特殊寄存器存储位置)</li>
+<li>低位 128 字节同时支持直接寻址和间接寻址,同时在<code>20h</code>的位置有 16 字节的按位寻址区,这里的数据还能通过位寻址(映射到位寻址空间的 00~7FH)</li>
+</ul>
+<p><code>data</code>显式声明数据存储位置为低位 128 字节<br><code>idata</code>显式声明存储位置为整个片内数据存储空间<br><code>bdata</code>显式声明数据存放在位寻址区</p>
+</li>
+<li><p>External Data Memory(片外数据存储空间)<br>片外数据存储空间,及通过片外扩展获得的存储空间,最高 64kb,只能通过数据指针寄存器间接访问<br><code>xdata</code>声明变量存放在整个外部数据存储空间<br><code>pdata</code>声明变量存放在外部数据存储空间的第一页,共 256 字节</p>
+</li>
+<li><p>SFR Memory(特殊寄存器内存)<br>每个特殊寄存器都对应一个硬件功能<br>可以通过直接访问内部数据内存来操作这些寄存器</p>
+</li>
+</ol>
+<p>最后是三个内存模型,可以通过在 Keil 的项目设置中更改</p>
+<ol>
+<li>Small:只使用片内数据存储空间的低位 128 字节,等同于所有数据都使用<code>data</code>声明</li>
+<li>Compact:片外数据存储空间的第一页,共 256 字节,等同于搜有数据都使用<code>pdata</code>声明</li>
+<li>Large:使用片外数据存储空间,最高 64kb,等同于所有数据都使用<code>xdata</code>声明</li>
+</ol>
+<h3 id="3-2-数据扩展"><a href="#3-2-数据扩展" class="headerlink" title="3.2 数据扩展"></a>3.2 数据扩展</h3><p>数据类型如下,复制自 Keil 中自带的教程中的 <code>Complete User&#39;s Guide Selection</code> 中的 <code>Cx51 Compiler User&#39;s Guide</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">数据类型</th>
+<th align="left">bit 数量</th>
+<th align="left">byte 数量</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">bit</td>
+<td align="left">1</td>
+<td align="left"></td>
+<td>0 to 1</td>
+</tr>
+<tr>
+<td align="left">signed char</td>
+<td align="left">8</td>
+<td align="left">1</td>
+<td>-128 — +127</td>
+</tr>
+<tr>
+<td align="left">unsigned char</td>
+<td align="left">8</td>
+<td align="left">1</td>
+<td>0 — 255</td>
+</tr>
+<tr>
+<td align="left">enum</td>
+<td align="left">8 / 16</td>
+<td align="left">1 or 2</td>
+<td>-128 — +127 or -32768 — +32767</td>
+</tr>
+<tr>
+<td align="left">signed short int</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td>-32768 — +32767</td>
+</tr>
+<tr>
+<td align="left">unsigned short int</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td>0 — 65535</td>
+</tr>
+<tr>
+<td align="left">signed int</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td>-32768 — +32767</td>
+</tr>
+<tr>
+<td align="left">unsigned int</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td>0 — 65535</td>
+</tr>
+<tr>
+<td align="left">signed long int</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td>-2147483648 — +2147483647</td>
+</tr>
+<tr>
+<td align="left">unsigned long int</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td>0 — 4294967295</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td>±1.175494E-38 — ±3.402823E+38</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td>±1.175494E-38 — ±3.402823E+38</td>
+</tr>
+<tr>
+<td align="left">sbit</td>
+<td align="left">1</td>
+<td align="left"></td>
+<td>0 or 1</td>
+</tr>
+<tr>
+<td align="left">sfr</td>
+<td align="left">8</td>
+<td align="left">1</td>
+<td>0 — 255</td>
+</tr>
+<tr>
+<td align="left">sfr16</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td>0 — 65535</td>
+</tr>
+</tbody></table>
+<p>其中新增的类型为</p>
+<ol>
+<li><p>bit<br>单个 bit,存放一个布尔值,不可声明其指针或数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bit name &lt;[&gt;&#x3D; value&lt;]&gt;;</span><br></pre></td></tr></table></figure></li>
+<li><p>sbit<br>声明一个特殊寄存器一位的引用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sbit name &#x3D; sfr-name ^ bit-position;</span><br><span class="line">sbit name &#x3D; sfr-address ^ bit-position;</span><br><span class="line">sbit name &#x3D; sbit-address;</span><br></pre></td></tr></table></figure></li>
+<li><p>sfr<br>声明一个 8 位特殊寄存器的引用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sfr name &#x3D; address;</span><br></pre></td></tr></table></figure></li>
+<li><p>sfr16<br>声明一个 16 位特殊寄存器的引用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sfr16 name &#x3D; address;</span><br></pre></td></tr></table></figure>
+<p>然后是一个变量修饰符–volatile:声明一个变量为”易变的”,用于禁止编译器的过度优化</p>
+</li>
+</ol>
+<p>在这份代码中,每次 while 循环判断中,编译器不会重复读取 reg1 寄存器,而是使用上一次的值<br>这会导致 reg1 被其他行为改变后无法及时更新到代码中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">unsigned char reg1;   &#x2F;&#x2F; Hardware Register #1</span><br><span class="line">unsigned char reg2;   &#x2F;&#x2F; Hardware Register #2</span><br><span class="line"></span><br><span class="line">void func (void)</span><br><span class="line">&#123;</span><br><span class="line">while (reg1 &amp; 0x01)   &#x2F;&#x2F; Repeat while bit 0 is set</span><br><span class="line">  &#123;</span><br><span class="line">  reg2 &#x3D; 0x00;        &#x2F;&#x2F; Toggle bit 7</span><br><span class="line">  reg2 &#x3D; 0x80;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>改用 volatile 修饰后,编译器会在每次 while 循环判断时都会重新读取 reg1 寄存器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">volatile unsigned char reg1;   &#x2F;&#x2F; Hardware Register #1</span><br><span class="line">volatile unsigned char reg2;   &#x2F;&#x2F; Hardware Register #2</span><br><span class="line"></span><br><span class="line">void func (void)</span><br><span class="line">&#123;</span><br><span class="line">while (reg1 &amp; 0x01)   &#x2F;&#x2F; Repeat while bit 0 is set</span><br><span class="line">  &#123;</span><br><span class="line">  reg2 &#x3D; 0x00;        &#x2F;&#x2F; Toggle bit 7</span><br><span class="line">  reg2 &#x3D; 0x80;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-函数扩展"><a href="#3-3-函数扩展" class="headerlink" title="3.3 函数扩展"></a>3.3 函数扩展</h3><h4 id="3-3-1-堆栈传参"><a href="#3-3-1-堆栈传参" class="headerlink" title="3.3.1 堆栈传参"></a>3.3.1 堆栈传参</h4><ol>
+<li>首先堆栈位于所有的全局变量地址上方,栈向上生长</li>
+<li>然后是,一般参数较少的函数调用会使用寄存器传参(三个参数,原文如下)<br>By default, the Cx51 Compiler passes up to three function arguments in registers. This enhances speed performance.</li>
+<li>最后是一个奇妙的机制,编译器会为每个函数参数指定一个固定的地址,然后栈中只存放函数返回地址,函数调用者把参数放到指定地点,被调用者从这些地方去取,节省了栈空间<br>The total stack space of the classic 8051 is limited to 256 bytes. Rather than consume stack space with function parameters or arguments, the Cx51 Compiler assigns a fixed memory location for each function parameter. When a function is called, the caller must copy the arguments into the assigned memory locations before transferring control to the desired function. The function then extracts its parameters, as needed, from these fixed memory locations. Only the return address is stored on the stack during this process. Interrupt functions require more stack space because they must switch register banks and save the values of a few registers on the stack.</li>
+</ol>
+<h4 id="3-3-2-寄存器传参"><a href="#3-3-2-寄存器传参" class="headerlink" title="3.3.2 寄存器传参"></a>3.3.2 寄存器传参</h4><p>不同位置和类型的参数使用不同的寄存器,复制自<code>Complete User&#39;s Guide Selection</code> 中的 <code>Cx51 Compiler User&#39;s Guide</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">ArgumentNumber</th>
+<th align="left">char/1-byte ptr</th>
+<th align="left">int/2-byte</th>
+<th align="left">ptr/long</th>
+<th align="left">float /generic ptr</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">R7</td>
+<td align="left">R6 &amp; R7</td>
+<td align="left">R4-R7</td>
+<td align="left">R1-R3</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">R5</td>
+<td align="left">R4 &amp; R5</td>
+<td align="left">R4-R7</td>
+<td align="left">R1-R3</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">R3</td>
+<td align="left">R2 &amp; R3</td>
+<td align="left"></td>
+<td align="left">R1-R3</td>
+</tr>
+</tbody></table>
+<p>如果参数类型与上述表中不一样,则其连带其后变量使用堆栈传参(如 bit 型参数)<br>If the first parameter of a function is a bit type, then other parameters are not passed in registers. This is because parameters that are passed in registers are out of sequence with the numbering scheme shown above. For this reason, bit parameters should be declared at the end of the argument list.</p>
+<h4 id="3-3-3-返回值类型"><a href="#3-3-3-返回值类型" class="headerlink" title="3.3.3 返回值类型"></a>3.3.3 返回值类型</h4><p>返回值永远使用寄存器传值</p>
+<table>
+<thead>
+<tr>
+<th align="left">Return Type</th>
+<th align="left">Registers</th>
+<th align="left">Storage Format</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">bit</td>
+<td align="left">Carry Flag</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">char, unsigned char, 1-byte ptr</td>
+<td align="left">R7</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">int, unsigned int, 2-byte ptr</td>
+<td align="left">R6 &amp; R7</td>
+<td align="left">MSB in R6, LSB in R7</td>
+</tr>
+<tr>
+<td align="left">long, unsigned long</td>
+<td align="left">R4-R7</td>
+<td align="left">MSB in R4, LSB in R7</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">R4-R7</td>
+<td align="left">32-Bit IEEE format</td>
+</tr>
+<tr>
+<td align="left">generic ptr</td>
+<td align="left">R1-R3</td>
+<td align="left">Memory type in R3, MSB R2, LSB R1</td>
+</tr>
+</tbody></table>
+<h4 id="3-3-4-内存模型"><a href="#3-3-4-内存模型" class="headerlink" title="3.3.4 内存模型"></a>3.3.4 内存模型</h4><p>首先是,编译器会自动优化变量存储,如下…<br>(本来想试试局部变量存储位置,结果找了半天找不到,一看汇编代码简直给我气笑了)  </p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-9.png">
+
+<p>正经来说,首先可以指定一个全局存储模型,然后也可以给不同函数指定特殊的存储模型<br>存储模型名字和作用和前面讲的一致<br>(试了半天都会被编译器最终优化成寄存器变量…算了先不管这个)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#pragma small         &#x2F;* Default to small model *&#x2F;</span><br><span class="line"></span><br><span class="line">extern int calc (char i, int b) large reentrant;</span><br><span class="line">extern int func (int i, float f) large;</span><br><span class="line">extern void *tcp (char xdata *xp, int ndx) compact;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int mtest (int i, int y)            &#x2F;* Small model *&#x2F;</span><br><span class="line">  &#123;</span><br><span class="line">  return (i * y + y * i + func(-1, 4.75));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int large_func (int i, int k) large &#x2F;* Large model *&#x2F;</span><br><span class="line">  &#123;</span><br><span class="line">  return (mtest (i, k) + 2);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-5-寄存器组机制"><a href="#3-3-5-寄存器组机制" class="headerlink" title="3.3.5 寄存器组机制"></a>3.3.5 寄存器组机制</h4><p>51 单片机提供了 4 组寄存器组(4*8 个),可以实现上下文切换(类似 x86 中的进程控制块 PCB)<br>默认使用 0 号寄存器组,可以通过 using 关键字指定函数使用哪一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void rb_function (void) using 3</span><br><span class="line">  &#123;</span><br><span class="line">  .</span><br><span class="line">  .</span><br><span class="line">  .</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-6-中断函数"><a href="#3-3-6-中断函数" class="headerlink" title="3.3.6 中断函数"></a>3.3.6 中断函数</h4><p>C51 编译器最高支持 32 个中断(芯片本身可能支持不到,如 80C51 只支持 5 个)<br>使用<code>interrupt num</code>声明一个函数为一个中断处理函数,其中<code>num</code>为中断号</p>
+<p>中断处理时的上下文切换规则如下:</p>
+<ol>
+<li>ACC, B, DPH, DPL, PSW 寄存器存入堆栈并在中断处理结束后恢复</li>
+<li>如果使用了 using 关键字指定寄存器组则不进行额外操作</li>
+<li>如果没有使用 using 关键字指明寄存器组,则原寄存器组存入堆栈,中断处理结束后恢复,中断函数使用原寄存器组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">unsigned int  interruptcnt;</span><br><span class="line">unsigned char second;</span><br><span class="line"></span><br><span class="line">void timer0 (void) interrupt 1 using 2  &#123;</span><br><span class="line">  if (++interruptcnt &#x3D;&#x3D; 4000)  &#123;    &#x2F;* count to 4000 *&#x2F;</span><br><span class="line">    second++;                       &#x2F;* second counter    *&#x2F;</span><br><span class="line">    interruptcnt &#x3D; 0;               &#x2F;* clear int counter *&#x2F;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-7-可重入函数"><a href="#3-3-7-可重入函数" class="headerlink" title="3.3.7 可重入函数"></a>3.3.7 可重入函数</h4><p>一般的函数不支持递归操作,且不能被多个进程同时调用,因为其局部变量可能存在寄存器中(与 x86 很不一样)<br>可以使用<code>reentrant</code>关键字声明一个可重入函数,可重入函数的局部变量存放在栈中,且其使用额外的栈指针来管理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int calc (char i, int b) reentrant  &#123;</span><br><span class="line">  int  x;</span><br><span class="line">  x &#x3D; table [i];</span><br><span class="line">  return (x * b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可重入函数有如下限制:</p>
+<ol>
+<li>不能使用 bit 型变量</li>
+<li>不能从 alien 函数中调用</li>
+<li>不能同时有 alien 属性,也不使用 using 和 interrupt 关键字</li>
+</ol>
+<p>关于可重入函数的其他内容可以自行参考 <code>Complete User&#39;s Guide Selection</code></p>
+<h2 id="4-硬件知识"><a href="#4-硬件知识" class="headerlink" title="4. 硬件知识"></a>4. 硬件知识</h2><h3 id="4-1-基础概念"><a href="#4-1-基础概念" class="headerlink" title="4.1 基础概念"></a>4.1 基础概念</h3><p>参考自:<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129850342">[深入理解 setup time 和 hold time | 知乎]</a></p>
+<ul>
+<li>建立时间(setup time): 数据信号必须先于时钟信号到达,以保证触发器可靠翻转</li>
+<li>保持时间(hold time): 时钟信号到达后,数据信号必须保持一段时间,以保证触发器翻转可靠翻转</li>
+<li>传输延迟时间(propagation delay time): 时钟动作信号到达后,一段延迟后触发器才建立新的稳定状态</li>
+<li>最高时钟频率(maximum clock frequency): 时钟最高频率</li>
+</ul>
+<h3 id="4-2-总线"><a href="#4-2-总线" class="headerlink" title="4.2 总线"></a>4.2 总线</h3><h4 id="4-2-1-I2C-总线"><a href="#4-2-1-I2C-总线" class="headerlink" title="4.2.1 I2C 总线"></a>4.2.1 I2C 总线</h4><p>参考自:<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31086959">[简单优雅的总线协议——I2C | 知乎]</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137568249">[I2C 通信协议介绍 | 知乎]</a></p>
+<p>I2C 总线全称为 Inter－Integrated Circuit(内部集成总线),为一个(多)主从总线结构<br>线上有主设备和从设备两种设备,二者都可以有多个<br>主设备可以与从设备通信(通过从设备地址指定从设备)<br>I2C 仅仅需要两根数据线,一根为时钟信号(Series Clock,SCL),一根为数据信号(Series Data,SDA)</p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-10.jpg">
+
+<p>I2C 中的数据线为漏极开路结构,必须添加一个额外的上拉电阻</p>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-11.png">
+
+<p>I2C 协议定义了两个特殊标志</p>
+<ul>
+<li>开始信号:SCL 高电平,SDA 下降沿</li>
+<li>结束信号:SCL 高电平,SDA 上升沿</li>
+</ul>
+<p>除了特殊标志以外的信息必须遵守以下规定:</p>
+<ul>
+<li>SCL 高电平时,SDA 必须稳定(否则就是特殊信号了)</li>
+<li>SDA 对于 SCL 上升沿有 setup time 要求(SDA 要提前稳定)</li>
+<li>SDA 对于 SCL 下降沿有 hold time 要求(SDA 要保持一段时间稳定)</li>
+<li>SDA 只能在 SCL 低电平时变化(好像是废话…)</li>
+</ul>
+<ol>
+<li><p>主设备写入从设备</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-12.png">
+
+<ol>
+<li>主设备发送起始信号</li>
+<li>主设备立即发送从设备地址及写入命令</li>
+<li>主设备把 SDL 拉到高电平<br>如果从设备准备接受,则发送一个低电平 ACK 信号<br>但是如果从设备错误(或者根本没有对应的从设备),则 SDL 为高电平 NACK 信号</li>
+<li>主设备发送写入地址,从设备发送 ACK/NACK</li>
+<li>主设备发送停止信号,通信结束</li>
+</ol>
+</blockquote>
+</li>
+<li><p>主设备读取从设备</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-13.png">
+
+<ol>
+<li>主设备发送起始信号</li>
+<li>主设备立即发送从设备地址及读取命令</li>
+<li>主设备把 SDL 拉到高电平<br>如果从设备准备接受,则发送一个低电平 ACK 信号<br>但是如果从设备错误(或者根本没有对应的从设备),则 SDL 为高电平 NACK 信号</li>
+<li>从设备发送写入地址,主设备发送 ACK/NACK</li>
+<li>主设备发送停止信号,通信结束,通信结束前需要发送一个 NACK 信号</li>
+</ol>
+</blockquote>
+</li>
+<li><p>复合操作</p>
+<blockquote>
+<img src="http://img.yishiyu.world/blogs/images/51单片机总结/ysy-14.png">
+
+<ol>
+<li>主设备发送起始信号</li>
+<li>主设备立即发送从设备地址及读取命令</li>
+<li>主设备把 SDL 拉到高电平<br>如果从设备准备接受,则发送一个低电平 ACK 信号<br>但是如果从设备错误(或者根本没有对应的从设备),则 SDL 为高电平 NACK 信号</li>
+<li>从设备发送写入地址,主设备发送 ACK/NACK</li>
+<li>主设备重新发送起始信号,并开始一个新的操作周期</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h4 id="4-2-2-SPI-总线"><a href="#4-2-2-SPI-总线" class="headerlink" title="4.2.2 SPI 总线"></a>4.2.2 SPI 总线</h4><p>SPI 全称 Serial Peripheral Interface(串行外设接口)</p>
+<p>相关资料(懒得写了):<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33356830">[简单快速的总线协议——SPI | 知乎]</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">遗世雨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yishiyu.github.io/2020/11/13/51%E5%8D%95%E7%89%87%E6%9C%BA%E6%80%BB%E7%BB%93/">http://yishiyu.github.io/2020/11/13/51单片机总结/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yishiyu.github.io" target="_blank">bibibi的小站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></div><div class="post_share"><div class="social-share" data-image="http://img.yishiyu.world/blogs/cover/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#51-%E5%8D%95%E7%89%87%E6%9C%BA%E6%80%BB%E7%BB%93"><span class="toc-text">51 单片机总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-MCS51-%E5%8D%95%E7%89%87%E6%9C%BA%E7%A1%AC%E4%BB%B6%E5%9F%BA%E7%A1%80"><span class="toc-text">1. MCS51 单片机硬件基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BC%95%E8%84%9A"><span class="toc-text">1.1 硬件结构与引脚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%97%B6%E9%92%9F%E4%BF%A1%E5%8F%B7"><span class="toc-text">1.2 时钟信号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%AD%98%E5%82%A8%E5%99%A8%E7%BB%93%E6%9E%84"><span class="toc-text">1.3 存储器结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-%E7%A8%8B%E5%BA%8F%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">1.3.1 程序存储器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">1.3.2 数据存储器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-text">1.4 定时器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-I-O-%E7%AB%AF%E5%8F%A3"><span class="toc-text">1.5 I&#x2F;O 端口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-1-%E5%B9%B6%E8%A1%8C%E6%8E%A5%E5%8F%A3"><span class="toc-text">1.5.1 并行接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-2-%E4%B8%B2%E8%A1%8C%E7%AB%AF%E5%8F%A3"><span class="toc-text">1.5.2 串行端口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F"><span class="toc-text">1.6 中断系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E6%80%BB%E7%BA%BF"><span class="toc-text">1.7 总线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Keil-%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">2. Keil 集成开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text">2.1 开发流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E4%BB%BF%E7%9C%9F%E4%B8%8E%E8%B0%83%E8%AF%95"><span class="toc-text">2.2 仿真与调试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-Proteus-Keil-%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">2.2.1 Proteus+Keil 编译器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-Proteus-Keil"><span class="toc-text">2.2.2 Proteus+Keil</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-C51-%E7%9F%A5%E8%AF%86"><span class="toc-text">3. C51 知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%86%85%E5%AD%98%E6%89%A9%E5%B1%95"><span class="toc-text">3.1 内存扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%95%B0%E6%8D%AE%E6%89%A9%E5%B1%95"><span class="toc-text">3.2 数据扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E6%89%A9%E5%B1%95"><span class="toc-text">3.3 函数扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-%E5%A0%86%E6%A0%88%E4%BC%A0%E5%8F%82"><span class="toc-text">3.3.1 堆栈传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E5%AF%84%E5%AD%98%E5%99%A8%E4%BC%A0%E5%8F%82"><span class="toc-text">3.3.2 寄存器传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-3-%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="toc-text">3.3.3 返回值类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-4-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">3.3.4 内存模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-5-%E5%AF%84%E5%AD%98%E5%99%A8%E7%BB%84%E6%9C%BA%E5%88%B6"><span class="toc-text">3.3.5 寄存器组机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-6-%E4%B8%AD%E6%96%AD%E5%87%BD%E6%95%B0"><span class="toc-text">3.3.6 中断函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-7-%E5%8F%AF%E9%87%8D%E5%85%A5%E5%87%BD%E6%95%B0"><span class="toc-text">3.3.7 可重入函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86"><span class="toc-text">4. 硬件知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-text">4.1 基础概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%80%BB%E7%BA%BF"><span class="toc-text">4.2 总线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-1-I2C-%E6%80%BB%E7%BA%BF"><span class="toc-text">4.2.1 I2C 总线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-2-SPI-%E6%80%BB%E7%BA%BF"><span class="toc-text">4.2.2 SPI 总线</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By 遗世雨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png"><span>陕ICP备20012321号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
