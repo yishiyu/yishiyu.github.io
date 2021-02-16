@@ -144,7 +144,7 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/011.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Docker学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-18T15:39:06.000Z" title="发表于 2020-09-18 23:39:06">2020-09-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:18:00.795Z" title="更新于 2021-02-09 11:18:00">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/011.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Docker学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-18T15:39:06.000Z" title="发表于 2020-09-18 23:39:06">2020-09-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:18:00.795Z" title="更新于 2021-02-09 11:18:00">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><blockquote>
 <ol>
 <li>Ubuntu 安装 Docker</li>
 <li>Docker hub</li>
@@ -158,7 +158,6 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-
 <p>关于 docker 的介绍:<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/53260098">[10 分钟看懂 Docker 和 K8S | 小枣君 | 知乎]</a></p>
 <p>关于互联网礼仪:<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25297842">[互联网转载礼仪 | 苏莉安 | 知乎]</a><br>前两天看了一个关于互联网礼仪的文章,觉的讲的比较好,分享一下<br>根据其中所说的,本博客网站中的所有引用都(几乎)没有复制原文的字,也都附上了链接地址(如上面两个).<br>所以应该还是属于分享的范畴的(和分享到 qq 空间啥的没差别)</p>
 <p>关于 Docker 的实现细节(比如联合文件系统啥的)可以自行搜索,本文重点写怎么用</p>
@@ -173,7 +172,6 @@
 </blockquote>
 <h3 id="1-2-配置阿里云镜像加速"><a href="#1-2-配置阿里云镜像加速" class="headerlink" title="1.2 配置阿里云镜像加速"></a>1.2 配置阿里云镜像加速</h3><p><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">[Docker 阿里云镜像加速 | aliyun]</a></p>
 <img src="http://img.yishiyu.world/blogs/images/Docker学习笔记/1-1.png">
-
 <h3 id="1-3-测试"><a href="#1-3-测试" class="headerlink" title="1.3 测试"></a>1.3 测试</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure>
 <h2 id="2-Docker-hub"><a href="#2-Docker-hub" class="headerlink" title="2. Docker hub"></a>2. Docker hub</h2><p>类似于 Github,Maven 仓库等东西,用来存放和共享镜像</p>
 <p><a target="_blank" rel="noopener" href="https://docs.docker.com/docker-hub/">[Docker hub | docker]</a></p>
@@ -196,9 +194,7 @@
 <p>首先创建命名空间,然后在命名空间中创建仓库,最后上传镜像</p>
 <p>在仓库界面,点击仓库名字即可查看仓库介绍及下面的教程</p>
 <img src="http://img.yishiyu.world/blogs/images/Docker学习笔记/3.1-1.png">
-
 <img src="http://img.yishiyu.world/blogs/images/Docker学习笔记/3.1-2.png">
-
 <p>示例(构建,运行,上传,删除本地镜像,拉取云端镜像):</p>
 <ul>
 <li><p>登录阿里云 Docker Registry</p>
@@ -217,121 +213,133 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">yishiyu-Lenovo#</span><span class="bash"> docker images</span></span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">nginx               latest              4bb46517cac3        4 weeks ago         133MB</span><br><span class="line">centos              latest              0d120b6ccaa8        5 weeks ago         215MB</span><br><span class="line">busybox             latest              018c9d7b792b        7 weeks ago         1.22MB</span><br><span class="line">hello-world         latest              bf756fb1ae65        8 months ago        13.3kB</span><br><span class="line"><span class="meta">yishiyu-Lenovo#</span><span class="bash"> docker pull registry.cn-beijing.aliyuncs.com/yishiyu/<span class="built_in">test</span>:1.0</span></span><br><span class="line">1.0: Pulling from yishiyu/test</span><br><span class="line">61c5ed1cbdf8: Already exists</span><br><span class="line">Digest: sha256:7601ec5593416591e62777f56cab721f71041f471d7b705554247943bf63bd16</span><br><span class="line">Status: Downloaded newer image for registry.cn-beijing.aliyuncs.com/yishiyu/test:1.0</span><br><span class="line">registry.cn-beijing.aliyuncs.com/yishiyu/test:1.0</span><br><span class="line"><span class="meta">yishiyu-Lenovo#</span><span class="bash"> docker images</span></span><br><span class="line">REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">registry.cn-beijing.aliyuncs.com/yishiyu/test   1.0                 04542b096c66        22 minutes ago      1.22MB</span><br><span class="line">nginx                                           latest              4bb46517cac3        4 weeks ago         133MB</span><br><span class="line">centos                                          latest              0d120b6ccaa8        5 weeks ago         215MB</span><br><span class="line">busybox                                         latest              018c9d7b792b        7 weeks ago         1.22MB</span><br><span class="line">hello-world                                     latest              bf756fb1ae65        8 months ago        13.3kB</span><br><span class="line"><span class="meta">yishiyu-Lenovo#</span><span class="bash"> docker run 045</span></span><br><span class="line">Hello World! Aliyun Yes!</span><br><span class="line"><span class="meta">yishiyu-Lenovo#</span></span><br></pre></td></tr></table></figure>
 <h2 id="4-docker-基本命令"><a href="#4-docker-基本命令" class="headerlink" title="4. docker 基本命令"></a>4. docker 基本命令</h2></li>
 </ul>
-<h3 id="4-1-通用命令"><a href="#4-1-通用命令" class="headerlink" title="4.1 通用命令"></a>4.1 通用命令</h3><table>
+<h3 id="4-1-通用命令"><a href="#4-1-通用命令" class="headerlink" title="4.1 通用命令"></a>4.1 通用命令</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">命令</th>
-<th align="left">含义</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">docker version</td>
-<td align="left">显示 docker 的版本信息</td>
+<tbody>
+<tr>
+<td style="text-align:left">docker version</td>
+<td style="text-align:left">显示 docker 的版本信息</td>
 </tr>
 <tr>
-<td align="left">docker info</td>
-<td align="left">显示 docker 的系统信息</td>
+<td style="text-align:left">docker info</td>
+<td style="text-align:left">显示 docker 的系统信息</td>
 </tr>
 <tr>
-<td align="left">docker [command] –help</td>
-<td align="left">显示命令文档</td>
+<td style="text-align:left">docker [command] —help</td>
+<td style="text-align:left">显示命令文档</td>
 </tr>
-</tbody></table>
-<h3 id="4-2-镜像命令"><a href="#4-2-镜像命令" class="headerlink" title="4.2 镜像命令"></a>4.2 镜像命令</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="4-2-镜像命令"><a href="#4-2-镜像命令" class="headerlink" title="4.2 镜像命令"></a>4.2 镜像命令</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">命令</th>
-<th align="left">含义</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">docker iamges</td>
-<td align="left">显示所有镜像的信息</td>
+<tbody>
+<tr>
+<td style="text-align:left">docker iamges</td>
+<td style="text-align:left">显示所有镜像的信息</td>
 </tr>
 <tr>
-<td align="left">docker search</td>
-<td align="left">在 docker hub 上搜索镜像</td>
+<td style="text-align:left">docker search</td>
+<td style="text-align:left">在 docker hub 上搜索镜像</td>
 </tr>
 <tr>
-<td align="left">docker pull</td>
-<td align="left">下载镜像</td>
+<td style="text-align:left">docker pull</td>
+<td style="text-align:left">下载镜像</td>
 </tr>
 <tr>
-<td align="left">docker rmi</td>
-<td align="left">删除容器</td>
+<td style="text-align:left">docker rmi</td>
+<td style="text-align:left">删除容器</td>
 </tr>
 <tr>
-<td align="left">docker run</td>
-<td align="left">启动镜像(有大量可选参数)</td>
+<td style="text-align:left">docker run</td>
+<td style="text-align:left">启动镜像(有大量可选参数)</td>
 </tr>
 <tr>
-<td align="left">docker commit</td>
-<td align="left">把一个容器(修改后)打包成一个镜像</td>
+<td style="text-align:left">docker commit</td>
+<td style="text-align:left">把一个容器(修改后)打包成一个镜像</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
-<p>docker run [options] imageID/imageName<br>可选参数:<br>–name: 给运行后的容器命名<br>-i: 交互式运行,为该容器保留 stdin(即是其是 detached 状态)<br>-d: 启动为后台服务进程<br>-t: 为该容器绑定一个伪终端(通常是当前终端)<br>-p: 为该容器绑定端口 [[[ip:(主机可能多个网卡)]hostsocket:]dockersocket]<br>-P: 随机指定端口</p>
+<p>docker run [options] imageID/imageName<br>可选参数:<br>—name: 给运行后的容器命名<br>-i: 交互式运行,为该容器保留 stdin(即是其是 detached 状态)<br>-d: 启动为后台服务进程<br>-t: 为该容器绑定一个伪终端(通常是当前终端)<br>-p: 为该容器绑定端口 [[[ip:(主机可能多个网卡)]hostsocket:]dockersocket]<br>-P: 随机指定端口</p>
 </blockquote>
-<h3 id="4-3-容器命令"><a href="#4-3-容器命令" class="headerlink" title="4.3 容器命令"></a>4.3 容器命令</h3><table>
+<h3 id="4-3-容器命令"><a href="#4-3-容器命令" class="headerlink" title="4.3 容器命令"></a>4.3 容器命令</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">命令</th>
-<th align="left">含义</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">docker ps</td>
-<td align="left">查看当前容器</td>
+<tbody>
+<tr>
+<td style="text-align:left">docker ps</td>
+<td style="text-align:left">查看当前容器</td>
 </tr>
 <tr>
-<td align="left">docker create</td>
-<td align="left">创建一个容器(不运行),参数与 run 一致</td>
+<td style="text-align:left">docker create</td>
+<td style="text-align:left">创建一个容器(不运行),参数与 run 一致</td>
 </tr>
 <tr>
-<td align="left">docker start</td>
-<td align="left">运行一个停止的容器</td>
+<td style="text-align:left">docker start</td>
+<td style="text-align:left">运行一个停止的容器</td>
 </tr>
 <tr>
-<td align="left">docker restart</td>
-<td align="left">重启一个停止的容器</td>
+<td style="text-align:left">docker restart</td>
+<td style="text-align:left">重启一个停止的容器</td>
 </tr>
 <tr>
-<td align="left">docker stop</td>
-<td align="left">停止一正在运行的容器</td>
+<td style="text-align:left">docker stop</td>
+<td style="text-align:left">停止一正在运行的容器</td>
 </tr>
 <tr>
-<td align="left">docker kill</td>
-<td align="left">强制停止一个正在运行的容器</td>
+<td style="text-align:left">docker kill</td>
+<td style="text-align:left">强制停止一个正在运行的容器</td>
 </tr>
 <tr>
-<td align="left">ctrl-P ctrl-Q</td>
-<td align="left">detach 一个容器(不退出)</td>
+<td style="text-align:left">ctrl-P ctrl-Q</td>
+<td style="text-align:left">detach 一个容器(不退出)</td>
 </tr>
 <tr>
-<td align="left">docker logs</td>
-<td align="left">显示某一个容器的日志</td>
+<td style="text-align:left">docker logs</td>
+<td style="text-align:left">显示某一个容器的日志</td>
 </tr>
 <tr>
-<td align="left">docker top</td>
-<td align="left">显示某个容器的 top 信息</td>
+<td style="text-align:left">docker top</td>
+<td style="text-align:left">显示某个容器的 top 信息</td>
 </tr>
 <tr>
-<td align="left">docker inspect</td>
-<td align="left">检查一个容器的信息</td>
+<td style="text-align:left">docker inspect</td>
+<td style="text-align:left">检查一个容器的信息</td>
 </tr>
 <tr>
-<td align="left">docker attach</td>
-<td align="left">attach 一个容器(不会创建新进程)</td>
+<td style="text-align:left">docker attach</td>
+<td style="text-align:left">attach 一个容器(不会创建新进程)</td>
 </tr>
 <tr>
-<td align="left">docker exec</td>
-<td align="left">使用容器执行一个新命令(会创建一个新进程)</td>
+<td style="text-align:left">docker exec</td>
+<td style="text-align:left">使用容器执行一个新命令(会创建一个新进程)</td>
 </tr>
 <tr>
-<td align="left">docker cp</td>
-<td align="left">从容器中拷贝文件到主机</td>
+<td style="text-align:left">docker cp</td>
+<td style="text-align:left">从容器中拷贝文件到主机</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="5-持久化存储和巻间状态共享"><a href="#5-持久化存储和巻间状态共享" class="headerlink" title="5. 持久化存储和巻间状态共享"></a>5. 持久化存储和巻间状态共享</h2><p>一个 Docker 镜像可能包含多个组件(Minecraft 服务器:Centos+JRE+MCServer)<br>其中不同的组件分为不同的层,构建一个镜像的过程也就是逐层叠加文件的过程(也可能包含其他命令)<br>其中最基本的层为 bootfs(通用的文件),在上面是操作系统必须组件.这些基本的组件可以被不同的容器共用</p>
 <p>构建出来的镜像是只读的,当一个镜像运行为容器后,在其上面的更改会被 Docker 作为一个新的层叠加在原镜像上<br>但是这样数据被绑定在具体容器上,无法复用和共享(当容器被删除后,其中的数据也就被删除了)</p>
 <p><strong>存储卷</strong>和<strong>卷容器</strong>解决的就是数据的持久化和容器共享</p>
@@ -341,71 +349,71 @@
 <li>管理存储卷:由 Docker 在其管理的空间内创建和管理的目录</li>
 </ul>
 <p>同时 Docker 提供了卷数据的权限管理,可设置为 ro(只读)和 rw(可读)写两种模式</p>
-<p>运行镜像的同时,使用-v(–volume)参数可以添加挂载卷(具体参考 man 手册)</p>
+<p>运行镜像的同时,使用-v(—volume)参数可以添加挂载卷(具体参考 man 手册)</p>
 <blockquote>
-<p>-v|–volume[=[[HOST-DIR:]CONTAINER-DIR[:OPTIONS]]]<br>hostdir-dir:container-dir: 使用绑定挂载存储卷<br>[name]:container-dir: 使用管理存储卷(name 为可选的名字)</p>
+<p>-v|—volume[=[[HOST-DIR:]CONTAINER-DIR[:OPTIONS]]]<br>hostdir-dir:container-dir: 使用绑定挂载存储卷<br>[name]:container-dir: 使用管理存储卷(name 为可选的名字)</p>
 </blockquote>
 <h3 id="5-2-存储卷共享"><a href="#5-2-存储卷共享" class="headerlink" title="5.2 存储卷共享"></a>5.2 存储卷共享</h3><h4 id="5-2-1-主机依赖共享"><a href="#5-2-1-主机依赖共享" class="headerlink" title="5.2.1 主机依赖共享"></a>5.2.1 主机依赖共享</h4><p>为多个容器绑定同一个绑定挂载存储卷,其依赖于主机上同一个目录,其内的数据自然会共享<br>如果有多个容器,主机依赖共享维护起来比较麻烦</p>
-<h4 id="5-2-2-从其他容器复制挂载卷"><a href="#5-2-2-从其他容器复制挂载卷" class="headerlink" title="5.2.2 从其他容器复制挂载卷"></a>5.2.2 从其他容器复制挂载卷</h4><p>运行容器的时候,–volumes-from 参数可以指定被复制的容器,这种方式又被称为<strong>卷容器模式</strong><br>如下,reader 会复制 writer 中挂载的所有容器(即是 writer 容器不在运行状态,其挂载的卷也不会消失)</p>
+<h4 id="5-2-2-从其他容器复制挂载卷"><a href="#5-2-2-从其他容器复制挂载卷" class="headerlink" title="5.2.2 从其他容器复制挂载卷"></a>5.2.2 从其他容器复制挂载卷</h4><p>运行容器的时候,—volumes-from 参数可以指定被复制的容器,这种方式又被称为<strong>卷容器模式</strong><br>如下,reader 会复制 writer 中挂载的所有容器(即是 writer 容器不在运行状态,其挂载的卷也不会消失)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run --name writer \</span><br><span class="line">-v /home/writer \</span><br><span class="line">echo &quot;writer ready&quot;</span><br><span class="line"></span><br><span class="line">docker run --name reader \</span><br><span class="line">--volumes-from writer \</span><br><span class="line">echo &quot;reader ready&quot;</span><br></pre></td></tr></table></figure>
 <p>volumes-from 共享有几个特点:</p>
 <ul>
 <li>容器内的挂载点无法改变</li>
-<li>如果使用多个–volumes-from 标志从多个容器内共享卷,且这些容器内的共享卷冲突,则只能成功挂载一个</li>
+<li>如果使用多个—volumes-from 标志从多个容器内共享卷,且这些容器内的共享卷冲突,则只能成功挂载一个</li>
 <li>不能更改卷的权限</li>
 </ul>
-<h4 id="5-2-3-管理卷的生命周期"><a href="#5-2-3-管理卷的生命周期" class="headerlink" title="5.2.3 管理卷的生命周期"></a>5.2.3 管理卷的生命周期</h4><p>docker volume 提供了一系列卷管理命令(docker volume –help 查看)<br>同时在删除容器的时候(docker rm),可以追加-v 参数,以删除所有与该容器相关的匿名卷(没有命名的管理卷)</p>
+<h4 id="5-2-3-管理卷的生命周期"><a href="#5-2-3-管理卷的生命周期" class="headerlink" title="5.2.3 管理卷的生命周期"></a>5.2.3 管理卷的生命周期</h4><p>docker volume 提供了一系列卷管理命令(docker volume —help 查看)<br>同时在删除容器的时候(docker rm),可以追加-v 参数,以删除所有与该容器相关的匿名卷(没有命名的管理卷)</p>
 <p>但是该数据卷只有在所有容器都不再使用它的时候才被删除</p>
 <h2 id="6-网络访问"><a href="#6-网络访问" class="headerlink" title="6. 网络访问"></a>6. 网络访问</h2><p>Docker 的网络访问方式一共有 4 个</p>
 <ul>
-<li><p>Close 容器<br>使用–net none 指定<br>该容器仅有自身回环地址,无法与外界通过网络交流</p>
+<li><p>Close 容器<br>使用—net none 指定<br>该容器仅有自身回环地址,无法与外界通过网络交流</p>
 </li>
-<li><p>Bridged 容器<br>使用–net bridge 指定(默认模式)<br>该容器通过回环地址和一个 Linux 虚拟网络设备进行网络访问<br>可以通过虚拟的网络接口进行网络交流</p>
+<li><p>Bridged 容器<br>使用—net bridge 指定(默认模式)<br>该容器通过回环地址和一个 Linux 虚拟网络设备进行网络访问<br>可以通过虚拟的网络接口进行网络交流</p>
 </li>
-<li><p>Joined 容器<br>使用–net container:容器名指定<br>该容器与被连接的容器共用一套网络接口</p>
+<li><p>Joined 容器<br>使用—net container:容器名指定<br>该容器与被连接的容器共用一套网络接口</p>
 </li>
-<li><p>Open 容器<br>使用–net host 指定<br>该容器直接使用宿主机的网络接口(肥肠危险)</p>
+<li><p>Open 容器<br>使用—net host 指定<br>该容器直接使用宿主机的网络接口(肥肠危险)</p>
 </li>
 </ul>
 <p>其中最常用的就是 Bridge 模式(也是默认模式)<br>所以重点介绍 Bridge 模式</p>
 <h3 id="6-1-访问外部网络"><a href="#6-1-访问外部网络" class="headerlink" title="6.1 访问外部网络"></a>6.1 访问外部网络</h3><blockquote>
-<p>-p, –publish [ip:[hostPort]]:containerPort<br>公开端口,主机和其他容器都可以看到<br>指定 hostPort 后,把容器的端口映射到主机的指定端口<br>同时也可以指定相同长度的两个范围,进行范围映射<br>如果没有指定,则映射到主机的随机端口</p>
-<p>-P, –publish-all<br>公开所有端口(随机映射)</p>
-<p>–expose=[]<br>暴露端口,但是仅限其他容器可见,主机不可见<br>可以是单个端口,也可以用范围指定多个端口</p>
+<p>-p, —publish [ip:[hostPort]]:containerPort<br>公开端口,主机和其他容器都可以看到<br>指定 hostPort 后,把容器的端口映射到主机的指定端口<br>同时也可以指定相同长度的两个范围,进行范围映射<br>如果没有指定,则映射到主机的随机端口</p>
+<p>-P, —publish-all<br>公开所有端口(随机映射)</p>
+<p>—expose=[]<br>暴露端口,但是仅限其他容器可见,主机不可见<br>可以是单个端口,也可以用范围指定多个端口</p>
 </blockquote>
-<h3 id="6-2-跨容器通信"><a href="#6-2-跨容器通信" class="headerlink" title="6.2 跨容器通信"></a>6.2 跨容器通信</h3><p>创建容器的时候,可以使用–link 指定被链接的目的容器</p>
+<h3 id="6-2-跨容器通信"><a href="#6-2-跨容器通信" class="headerlink" title="6.2 跨容器通信"></a>6.2 跨容器通信</h3><p>创建容器的时候,可以使用—link 指定被链接的目的容器</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建 mysql 服务</span></span><br><span class="line">docker run -d --name importantData \</span><br><span class="line">--expose 3306 \</span><br><span class="line">mysql</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建web服务器</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 该容器可以通过 db:3306 访问数据库服务</span></span><br><span class="line">docker run -d --name importantWebapp \</span><br><span class="line">--link importantData:db \</span><br><span class="line">webapp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建其他应用</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 该容器没有通往 mysql 服务的路由</span></span><br><span class="line">docker run -d --name otherWebapp \</span><br><span class="line">webapp</span><br></pre></td></tr></table></figure>
 <h3 id="6-3-自定义网络"><a href="#6-3-自定义网络" class="headerlink" title="6.3 自定义网络"></a>6.3 自定义网络</h3><p>docker network 提供了一系列自定义网络的命令</p>
 <blockquote>
 <p>Usage: docker network COMMAND<br>Manage networks<br>Commands:<br>connect Connect a container to a network<br>create Create a network<br>disconnect Disconnect a container from a network<br>inspect Display detailed information on one or more networks<br>ls List networks<br>prune Remove all unused networks<br>rm Remove one or more networks</p>
 </blockquote>
 <p>创建完自定义网络后,可以使用 connect 命令把容器接入网络<br>这种接入不会替换掉原本的网络,相当于给容器增加了一个网卡</p>
-<p>可以使用 docker network disconnect 把一个容器从网络中断开<br>自检网络可以把不同的容器连接起来(就不再需要–link 连接了)</p>
+<p>可以使用 docker network disconnect 把一个容器从网络中断开<br>自检网络可以把不同的容器连接起来(就不再需要—link 连接了)</p>
 <p>如果使用默认的网络,不同的容器只能使用 ip 地址互相连接<br>使用自定义网络,不同的容器可以把不同的容器名作为域名进行连接访问</p>
-<h2 id="7-容器隔离"><a href="#7-容器隔离" class="headerlink" title="7. 容器隔离"></a>7. 容器隔离</h2><p>容器隔离可以防止一个容器中的应用耗费大量资源,影响系统的其他服务<br>仅介绍最常用的两个:cpu 和内存,其他可以参考&lt;&lt;Docker in Action&gt;&gt;</p>
-<h3 id="7-1-限制内存"><a href="#7-1-限制内存" class="headerlink" title="7.1 限制内存"></a>7.1 限制内存</h3><p>在使用 run 或 create 命令的同时,使用参数–memroy 可以添加内存限制</p>
+<h2 id="7-容器隔离"><a href="#7-容器隔离" class="headerlink" title="7. 容器隔离"></a>7. 容器隔离</h2><p>容器隔离可以防止一个容器中的应用耗费大量资源,影响系统的其他服务<br>仅介绍最常用的两个:cpu 和内存,其他可以参考\&lt;\<Docker in Action\>></p>
+<h3 id="7-1-限制内存"><a href="#7-1-限制内存" class="headerlink" title="7.1 限制内存"></a>7.1 限制内存</h3><p>在使用 run 或 create 命令的同时,使用参数—memroy 可以添加内存限制</p>
 <blockquote>
-<p>–memory size<br>size 由一个数字和一个单位字母组成<br>单位字母:b,k,m,g</p>
+<p>—memory size<br>size 由一个数字和一个单位字母组成<br>单位字母:b,k,m,g</p>
 </blockquote>
-<p>添加内存限制后,如果内存满足不了容器需求,其中的软件有多种失败方法<br>有的可能由于内存访问错误而失败,有的可能会记录内存溢出错误<br>Docker 既不检测也不记录这种错误,也不尝试缓解…<br>只能通过 run 命令的–restart 选项指定重启逻辑<br>(可以通过 man docker run 查看详细参数)</p>
-<h3 id="7-2-显示-CPU"><a href="#7-2-显示-CPU" class="headerlink" title="7.2 显示 CPU"></a>7.2 显示 CPU</h3><p>在使用 run 或 create 命令的同时<br>使用–cpu-shares 可以设定 CPU 限制<br>使用–cpuset-cpus 可以设定限制使用的 CPU 核</p>
+<p>添加内存限制后,如果内存满足不了容器需求,其中的软件有多种失败方法<br>有的可能由于内存访问错误而失败,有的可能会记录内存溢出错误<br>Docker 既不检测也不记录这种错误,也不尝试缓解…<br>只能通过 run 命令的—restart 选项指定重启逻辑<br>(可以通过 man docker run 查看详细参数)</p>
+<h3 id="7-2-显示-CPU"><a href="#7-2-显示-CPU" class="headerlink" title="7.2 显示 CPU"></a>7.2 显示 CPU</h3><p>在使用 run 或 create 命令的同时<br>使用—cpu-shares 可以设定 CPU 限制<br>使用—cpuset-cpus 可以设定限制使用的 CPU 核</p>
 <blockquote>
-<p>–cpu-shares 比重数字<br>指定该容器最大占用 CPU 的比重(具体占用比例还与所有容器比重之和有关)<br>–cpuset-cpus 0,1,2/0-2<br>使用数字(逗号分隔)或者范围指定该容器所有的 CPU 核</p>
+<p>—cpu-shares 比重数字<br>指定该容器最大占用 CPU 的比重(具体占用比例还与所有容器比重之和有关)<br>—cpuset-cpus 0,1,2/0-2<br>使用数字(逗号分隔)或者范围指定该容器所有的 CPU 核</p>
 </blockquote>
 <h2 id="8-构建镜像"><a href="#8-构建镜像" class="headerlink" title="8. 构建镜像"></a>8. 构建镜像</h2><p>构建镜像有两种方式:从容器中构建,使用 Dockerfile 构建</p>
 <h3 id="8-1-从容器中构建"><a href="#8-1-从容器中构建" class="headerlink" title="8.1 从容器中构建"></a>8.1 从容器中构建</h3><h4 id="8-1-1-commit"><a href="#8-1-1-commit" class="headerlink" title="8.1.1 commit"></a>8.1.1 commit</h4><blockquote>
 <p>commit 从一个容器中创建新的镜像</p>
-<p>Usage: docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]<br>Options:<br>-a, –author string Author (e.g., “John Hannibal Smith <a href="mailto:&#x68;&#x61;&#x6e;&#x6e;&#105;&#98;&#x61;&#108;&#64;&#x61;&#x2d;&#x74;&#101;&#97;&#109;&#x2e;&#x63;&#x6f;&#109;">&#x68;&#x61;&#x6e;&#x6e;&#105;&#98;&#x61;&#108;&#64;&#x61;&#x2d;&#x74;&#101;&#97;&#109;&#x2e;&#x63;&#x6f;&#109;</a>“)<br>-c, –change list Apply Dockerfile instruction to the created image<br>-m, –message string Commit message<br>-p, –pause Pause container during commit (default true)</p>
+<p>Usage: docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]<br>Options:<br>-a, —author string Author (e.g., “John Hannibal Smith <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x68;&#x61;&#110;&#110;&#x69;&#x62;&#97;&#108;&#64;&#97;&#x2d;&#x74;&#101;&#x61;&#109;&#46;&#99;&#111;&#x6d;">&#x68;&#x61;&#110;&#110;&#x69;&#x62;&#97;&#108;&#64;&#97;&#x2d;&#x74;&#101;&#x61;&#109;&#46;&#99;&#111;&#x6d;</a>“)<br>-c, —change list Apply Dockerfile instruction to the created image<br>-m, —message string Commit message<br>-p, —pause Pause container during commit (default true)</p>
 </blockquote>
 <h4 id="8-1-2-export"><a href="#8-1-2-export" class="headerlink" title="8.1.2 export"></a>8.1.2 export</h4><p>把文件系统打包成 tar 归档</p>
 <blockquote>
 <p>export 把一个容器的文件系统(从容器角度能观察到的所有文件)输出为 tar 归档<br>该归档不再分层,而是一个扁平的文件系统</p>
-<p>Usage: docker export [OPTIONS] CONTAINER<br>Options:<br>-o, –output string Write to a file, instead of STDOUT</p>
+<p>Usage: docker export [OPTIONS] CONTAINER<br>Options:<br>-o, —output string Write to a file, instead of STDOUT</p>
 </blockquote>
 <p>从归档中创建文件系统</p>
 <blockquote>
 <p>import 从 tar 归档中创建一个文件系统</p>
-<p>Usage: docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]<br>Options:<br>-c, –change list Apply Dockerfile instruction to the created image<br>-m, –message string Set commit message for imported image<br>–platform string Set platform if server is multi-platform capable</p>
+<p>Usage: docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]<br>Options:<br>-c, —change list Apply Dockerfile instruction to the created image<br>-m, —message string Set commit message for imported image<br>—platform string Set platform if server is multi-platform capable</p>
 </blockquote>
 <p>export 的其他作用</p>
 <blockquote>
@@ -414,82 +422,86 @@
 <h4 id="8-1-3-save"><a href="#8-1-3-save" class="headerlink" title="8.1.3 save"></a>8.1.3 save</h4><p>把镜像保存为归档</p>
 <blockquote>
 <p>save 把一个镜像或多个镜像输出位 tar 归档</p>
-<p>Usage: docker save [OPTIONS] IMAGE [IMAGE…]<br>Save one or more images to a tar archive (streamed to STDOUT by default)<br>Options:<br>-o, –output string Write to a file, instead of STDOUT</p>
+<p>Usage: docker save [OPTIONS] IMAGE [IMAGE…]<br>Save one or more images to a tar archive (streamed to STDOUT by default)<br>Options:<br>-o, —output string Write to a file, instead of STDOUT</p>
 </blockquote>
 <p>从归档中创建镜像</p>
 <blockquote>
 <p>load 从归档中创建镜像</p>
-<p>Usage: docker load [OPTIONS]<br>Options:<br>-i, –input string Read from tar archive file, instead of STDIN<br>-q, –quiet Suppress the load output</p>
+<p>Usage: docker load [OPTIONS]<br>Options:<br>-i, —input string Read from tar archive file, instead of STDIN<br>-q, —quiet Suppress the load output</p>
 </blockquote>
 <h3 id="8-2-使用-Dockerfile-构建"><a href="#8-2-使用-Dockerfile-构建" class="headerlink" title="8.2 使用 Dockerfile 构建"></a>8.2 使用 Dockerfile 构建</h3><p>除了手动修改镜像然后导出,也可以使用类似 Makefile 的 Dockerfile 来自动构建<br>Dockerfile 中的每个命令都会穿件一个新层<br>下面列出简单介绍,详细可以参考官方的文档()<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/builder/">[Dockerfile Reference | Docker]</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">指令</th>
-<th align="left">作用</th>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">FROM</td>
-<td align="left">从一个基础镜像开始进行构造</td>
+<tbody>
+<tr>
+<td style="text-align:left">FROM</td>
+<td style="text-align:left">从一个基础镜像开始进行构造</td>
 </tr>
 <tr>
-<td align="left">MAINTAINER</td>
-<td align="left">设置维护者的信息</td>
+<td style="text-align:left">MAINTAINER</td>
+<td style="text-align:left">设置维护者的信息</td>
 </tr>
 <tr>
-<td align="left">RUN</td>
-<td align="left">运行哪些命令(如 RUN apt-get insatll XXX)</td>
+<td style="text-align:left">RUN</td>
+<td style="text-align:left">运行哪些命令(如 RUN apt-get insatll XXX)</td>
 </tr>
 <tr>
-<td align="left">ENTRYPOINT</td>
-<td align="left">设置镜像的入口点</td>
+<td style="text-align:left">ENTRYPOINT</td>
+<td style="text-align:left">设置镜像的入口点</td>
 </tr>
 <tr>
-<td align="left">ENV A “app” B “book”</td>
-<td align="left">类似 run 时的–env 参数,添加环境变量</td>
+<td style="text-align:left">ENV A “app” B “book”</td>
+<td style="text-align:left">类似 run 时的—env 参数,添加环境变量</td>
 </tr>
 <tr>
-<td align="left">LABEL</td>
-<td align="left">定义键值对,会被记录为额外元数据,和–label 参数一致</td>
+<td style="text-align:left">LABEL</td>
+<td style="text-align:left">定义键值对,会被记录为额外元数据,和—label 参数一致</td>
 </tr>
 <tr>
-<td align="left">WORKDIR</td>
-<td align="left">设置初始工作目录</td>
+<td style="text-align:left">WORKDIR</td>
+<td style="text-align:left">设置初始工作目录</td>
 </tr>
 <tr>
-<td align="left">EXPOSE</td>
-<td align="left">设置对外开放端口,同–expose 参数一致</td>
+<td style="text-align:left">EXPOSE</td>
+<td style="text-align:left">设置对外开放端口,同—expose 参数一致</td>
 </tr>
 <tr>
-<td align="left">USER</td>
-<td align="left">设置用户和用户组,一般不用设置</td>
+<td style="text-align:left">USER</td>
+<td style="text-align:left">设置用户和用户组,一般不用设置</td>
 </tr>
 <tr>
-<td align="left">COPY</td>
-<td align="left">复制文件到镜像中</td>
+<td style="text-align:left">COPY</td>
+<td style="text-align:left">复制文件到镜像中</td>
 </tr>
 <tr>
-<td align="left">VOLUME</td>
-<td align="left">与–volume 参数一致,为镜像挂载数据卷(无法挂载绑定卷)</td>
+<td style="text-align:left">VOLUME</td>
+<td style="text-align:left">与—volume 参数一致,为镜像挂载数据卷(无法挂载绑定卷)</td>
 </tr>
 <tr>
-<td align="left">ADD</td>
-<td align="left">复制文件到镜像中,如果是 url 会自动拉取,如果是归档会自动解压</td>
+<td style="text-align:left">ADD</td>
+<td style="text-align:left">复制文件到镜像中,如果是 url 会自动拉取,如果是归档会自动解压</td>
 </tr>
 <tr>
-<td align="left">CMD</td>
-<td align="left">设定初始命令</td>
+<td style="text-align:left">CMD</td>
+<td style="text-align:left">设定初始命令</td>
 </tr>
 <tr>
-<td align="left">ONBUILD</td>
-<td align="left">在本镜像作为基础镜像再次构建时触发(不常用)</td>
+<td style="text-align:left">ONBUILD</td>
+<td style="text-align:left">在本镜像作为基础镜像再次构建时触发(不常用)</td>
 </tr>
 <tr>
-<td align="left">SHELL</td>
-<td align="left">指定 shell 类型</td>
+<td style="text-align:left">SHELL</td>
+<td style="text-align:left">指定 shell 类型</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>命令格式:</p>
 <blockquote>
 <p>shell 格式:就是 shell 命令的格式<br>如 RUN apt-get install -y git</p>

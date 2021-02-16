@@ -144,11 +144,10 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/018.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">verilog基本语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-11T14:32:12.000Z" title="发表于 2019-09-11 22:32:12">2019-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:19:35.271Z" title="更新于 2021-02-09 11:19:35">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Verilog-基本语法"><a href="#Verilog-基本语法" class="headerlink" title="Verilog 基本语法"></a>Verilog 基本语法</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/018.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">verilog基本语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-09-11T14:32:12.000Z" title="发表于 2019-09-11 22:32:12">2019-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:19:35.271Z" title="更新于 2021-02-09 11:19:35">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Verilog-基本语法"><a href="#Verilog-基本语法" class="headerlink" title="Verilog 基本语法"></a>Verilog 基本语法</h1><blockquote>
 <p>分类<br>模块<br>语法<br>语法要点<br>Test bench<br>执行</p>
 </blockquote>
 <a id="more"></a>
-
 <h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1. 分类"></a>1. 分类</h2><blockquote>
 <ul>
 <li>系统级：不可综合的</li>
@@ -181,34 +180,38 @@
 <p>网络型：nets type</p>
 <p>寄存器型：register type</p>
 </blockquote>
-<h4 id="网络型"><a href="#网络型" class="headerlink" title="网络型"></a>网络型</h4><table>
+<h4 id="网络型"><a href="#网络型" class="headerlink" title="网络型"></a>网络型</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">类型</th>
-<th align="center">功能</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">功能</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">wire, tri</td>
-<td align="center">连线功能</td>
+<tbody>
+<tr>
+<td style="text-align:center">wire, tri</td>
+<td style="text-align:center">连线功能</td>
 </tr>
 <tr>
-<td align="center">wor,trior</td>
-<td align="center">多重驱动时，具有线或功能的连线型</td>
+<td style="text-align:center">wor,trior</td>
+<td style="text-align:center">多重驱动时，具有线或功能的连线型</td>
 </tr>
 <tr>
-<td align="center">wand,triand</td>
-<td align="center">多重驱动时，具有线与功能的连线型</td>
+<td style="text-align:center">wand,triand</td>
+<td style="text-align:center">多重驱动时，具有线与功能的连线型</td>
 </tr>
 <tr>
-<td align="center">tri1,tri0</td>
-<td align="center">上拉电阻/下拉电阻</td>
+<td style="text-align:center">tri1,tri0</td>
+<td style="text-align:center">上拉电阻/下拉电阻</td>
 </tr>
 <tr>
-<td align="center">supply1/supply0</td>
-<td align="center">电源（逻辑 1）/ 地（逻辑 0）</td>
+<td style="text-align:center">supply1/supply0</td>
+<td style="text-align:center">电源（逻辑 1）/ 地（逻辑 0）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>wire 类型（最常用）</strong></p>
 <blockquote>
 <p>常用来表示用 assign 语句赋值的组合逻辑信号</p>
@@ -219,62 +222,71 @@
 <p>wire 数据 1，数据 2，……. 数据 n；</p>
 <p>例子：wire[20:1] addrbus; //定义了 20 位位宽 wire 型向量地址总线</p>
 </blockquote>
-<h4 id="寄存器型"><a href="#寄存器型" class="headerlink" title="寄存器型"></a>寄存器型</h4><table>
+<h4 id="寄存器型"><a href="#寄存器型" class="headerlink" title="寄存器型"></a>寄存器型</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">类型</th>
-<th align="center">功能说明</th>
-<th align="center">具体硬件</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">功能说明</th>
+<th style="text-align:center">具体硬件</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">reg</td>
-<td align="center">常用的寄存器型变量</td>
-<td align="center">触发器、寄存器</td>
+<tbody>
+<tr>
+<td style="text-align:center">reg</td>
+<td style="text-align:center">常用的寄存器型变量</td>
+<td style="text-align:center">触发器、寄存器</td>
 </tr>
 <tr>
-<td align="center">integer</td>
-<td align="center">32 位带符号整数型变量</td>
-<td align="center">无</td>
+<td style="text-align:center">integer</td>
+<td style="text-align:center">32 位带符号整数型变量</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td align="center">real</td>
-<td align="center">64 位带符号整数型变量</td>
-<td align="center">无</td>
+<td style="text-align:center">real</td>
+<td style="text-align:center">64 位带符号整数型变量</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td align="center">time</td>
-<td align="center">无符号时间变量</td>
-<td align="center">无</td>
+<td style="text-align:center">time</td>
+<td style="text-align:center">无符号时间变量</td>
+<td style="text-align:center">无</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>语法</strong></p>
 <blockquote>
 <p>reg 数据 1，数据 2，…… 数据 n；</p>
 <p>例子：reg[8:1] data</p>
 <pre><code>        reg[7:0] memory[1023:0]     //定义1k字节(8bits)的存储器
-</code></pre>
-</blockquote>
-<h3 id="1-3-运算符"><a href="#1-3-运算符" class="headerlink" title="1.3 运算符"></a>1.3 运算符</h3><p><strong><em>基本同 C++</em></strong></p>
+</code></pre></blockquote>
+<h3 id="1-3-运算符"><a href="#1-3-运算符" class="headerlink" title="1.3 运算符"></a>1.3 运算符</h3><p><strong>_基本同 C++_</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">类别</th>
-<th align="center">运算符</th>
-<th align="center">例子/说明</th>
+<th style="text-align:center">类别</th>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">例子/说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">缩减运算符</td>
-<td align="center">&amp;，|，<del>&amp;<br /></del>|，^，~^</td>
-<td align="center">自身各个 bit 从低位到高位连续运算</td>
+<tbody>
+<tr>
+<td style="text-align:center">缩减运算符</td>
+<td style="text-align:center">&amp;，\</td>
+<td style="text-align:center">，~&amp;<br />~\</td>
+<td>，^，~^</td>
+<td>自身各个 bit 从低位到高位连续运算</td>
 </tr>
 <tr>
-<td align="center">链接运算符</td>
-<td align="center">{}</td>
-<td align="center">{a,b,c,d,e,f,g}</td>
+<td style="text-align:center">链接运算符</td>
+<td style="text-align:center">{}</td>
+<td style="text-align:center">{a,b,c,d,e,f,g}</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="4-语句"><a href="#4-语句" class="headerlink" title="4. 语句"></a>4. 语句</h2><h3 id="4-1-块语句"><a href="#4-1-块语句" class="headerlink" title="4.1 块语句"></a>4.1 块语句</h3><blockquote>
 <ul>
 <li>顺序块：begin-end</li>
@@ -282,18 +294,18 @@
 </ul>
 </blockquote>
 <p>并行块中的语句块并行执行，其中包含单条语句和顺序块。</p>
-<h3 id="4-2-过程块"><a href="#4-2-过程块" class="headerlink" title="4.2 过程块"></a>4.2 过程块</h3><h4 id="always"><a href="#always" class="headerlink" title="always"></a>always</h4><p><em>用于描述带有敏感信号列表的过程块，always 过程块不能嵌套使用。</em></p>
+<h3 id="4-2-过程块"><a href="#4-2-过程块" class="headerlink" title="4.2 过程块"></a>4.2 过程块</h3><h4 id="always"><a href="#always" class="headerlink" title="always"></a>always</h4><p>_用于描述带有敏感信号列表的过程块，always 过程块不能嵌套使用。_</p>
 <blockquote>
 <p>always @(&lt;敏感信号表达式&gt;)</p>
 <p>//posedge-&gt;上升沿触发 negedge-&gt;下降沿触发</p>
 <p>begin<br>//过程赋值<br>//if 语句<br>//case 语句<br>//while,repeat,for 语句<br>//task，function 调用<br>end</p>
 </blockquote>
-<h4 id="initial"><a href="#initial" class="headerlink" title="initial"></a>initial</h4><p><em>用于描述初始化过程块，initial 过程块不能嵌套使用。</em></p>
-<p><em>主要面向功能模拟，不具有可综合性，只用于测试文件</em></p>
+<h4 id="initial"><a href="#initial" class="headerlink" title="initial"></a>initial</h4><p>_用于描述初始化过程块，initial 过程块不能嵌套使用。_</p>
+<p>_主要面向功能模拟，不具有可综合性，只用于测试文件_</p>
 <blockquote>
 <p>initial //如果有多个 initial 过程块，各个模块并行执行<br>begin<br>语句 1;<br>语句 2;<br>……<br>end</p>
 </blockquote>
-<h3 id="4-3-赋值语句"><a href="#4-3-赋值语句" class="headerlink" title="4.3 赋值语句"></a>4.3 赋值语句</h3><h4 id="4-3-1-连续赋值语句（assign）"><a href="#4-3-1-连续赋值语句（assign）" class="headerlink" title="4.3.1 连续赋值语句（assign）"></a>4.3.1 连续赋值语句（assign）</h4><p><em>常用于对 wire 型变量进行赋值</em></p>
+<h3 id="4-3-赋值语句"><a href="#4-3-赋值语句" class="headerlink" title="4.3 赋值语句"></a>4.3 赋值语句</h3><h4 id="4-3-1-连续赋值语句（assign）"><a href="#4-3-1-连续赋值语句（assign）" class="headerlink" title="4.3.1 连续赋值语句（assign）"></a>4.3.1 连续赋值语句（assign）</h4><p>_常用于对 wire 型变量进行赋值_</p>
 <blockquote>
 <p>assign c=a&amp;b</p>
 <p>a,b 信号的任何变化，都随时反应到信号 c 上（组合逻辑）</p>
@@ -309,7 +321,7 @@
 <p><strong>case2</strong><br>if (&lt;条件表达式&gt;) 语句或语句块；<br>else 语句或语句块；</p>
 <p><strong>case3</strong><br>if (&lt;条件表达式&gt;) 语句或语句块；<br>else if (&lt;条件表达式&gt;) 语句或语句块;<br>……<br>else if (&lt;条件表达式&gt;) 语句或语句块;<br>else 语句或语句块；</p>
 </blockquote>
-<p><em>if-else 需要配对写齐，否则会综合出来锁存器。</em></p>
+<p>_if-else 需要配对写齐，否则会综合出来锁存器。_</p>
 <h4 id="case"><a href="#case" class="headerlink" title="case"></a>case</h4><blockquote>
 <p>case (&lt;敏感表达式&gt;)<br>值 1：语句与语句块；<br>值 2：语句与语句块；<br>……<br>值 n：语句与语句块；<br>default：语句或语句块；（可省略）<br>encase</p>
 </blockquote>
@@ -355,7 +367,7 @@
 <li>阻塞赋值用=</li>
 <li>非阻塞赋值用&lt;=</li>
 </ul>
-<p><strong><em>Coding 要点</em></strong></p>
+<p><strong>_Coding 要点_</strong></p>
 <ul>
 <li>边缘触发逻辑一律用&lt;=赋值</li>
 <li>电平触发一律用=赋值</li>

@@ -145,20 +145,19 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/016.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ShellScript学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-20T14:43:08.000Z" title="发表于 2020-09-20 22:43:08">2020-09-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:19:03.686Z" title="更新于 2021-02-09 11:19:03">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="ShellScript-学习笔记"><a href="#ShellScript-学习笔记" class="headerlink" title="ShellScript 学习笔记"></a>ShellScript 学习笔记</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/016.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ShellScript学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-20T14:43:08.000Z" title="发表于 2020-09-20 22:43:08">2020-09-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:19:03.686Z" title="更新于 2021-02-09 11:19:03">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="ShellScript-学习笔记"><a href="#ShellScript-学习笔记" class="headerlink" title="ShellScript 学习笔记"></a>ShellScript 学习笔记</h1><blockquote>
 <ol>
 <li>概述</li>
 <li>常用命令</li>
 </ol>
 </blockquote>
 <a id="more"></a>
-
 <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><p>ShellScript 指批处理脚本(能被 shell 执行,其中 bash 用的最多)<br>ShellScripy 脚本文件通常以.sh 结尾,赋予执行权限后可以直接用名字调用</p>
 <h3 id="1-1-注释"><a href="#1-1-注释" class="headerlink" title="1.1 注释"></a>1.1 注释</h3><p>在第一行,可以指定执行该脚本的 shell,如:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br></pre></td></tr></table></figure>
 <p>除了第一行,以#开始到该行结束为注释</p>
 <h3 id="1-2-返回值"><a href="#1-2-返回值" class="headerlink" title="1.2 返回值"></a>1.2 返回值</h3><p>在 Shell 中,执行完一个命令,文件,程序之后,会返回给 shell 一个返回值,可以通过<code>$?</code>查看该返回值</p>
-<h3 id="1-3-规范"><a href="#1-3-规范" class="headerlink" title="1.3 规范"></a>1.3 规范</h3><p>参考自&lt;&lt;鸟哥的 Linux 私房菜–基础篇&gt;&gt;</p>
+<h3 id="1-3-规范"><a href="#1-3-规范" class="headerlink" title="1.3 规范"></a>1.3 规范</h3><p>参考自&lt;&lt;鸟哥的 Linux 私房菜—基础篇&gt;&gt;</p>
 <p>在 shellscript 的前面,可以添加一些该文件的信息</p>
 <ul>
 <li>script 的功能</li>
@@ -213,287 +212,313 @@
 <h3 id="3-2-判断表达式"><a href="#3-2-判断表达式" class="headerlink" title="3.2 判断表达式"></a>3.2 判断表达式</h3><h4 id="3-2-1-test-指令判断"><a href="#3-2-1-test-指令判断" class="headerlink" title="3.2.1 test 指令判断"></a>3.2.1 test 指令判断</h4><ul>
 <li>首先是四个逻辑判断</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">表达式</th>
-<th align="left">结果逻辑</th>
+<th style="text-align:left">表达式</th>
+<th style="text-align:left">结果逻辑</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">( 表达式 )</td>
-<td align="left">表达式为真</td>
+<tbody>
+<tr>
+<td style="text-align:left">( 表达式 )</td>
+<td style="text-align:left">表达式为真</td>
 </tr>
 <tr>
-<td align="left">! 表达式</td>
-<td align="left">表达式为假</td>
+<td style="text-align:left">! 表达式</td>
+<td style="text-align:left">表达式为假</td>
 </tr>
 <tr>
-<td align="left">表达式 1 -a 表达式 2</td>
-<td align="left">两个表达式都是真</td>
+<td style="text-align:left">表达式 1 -a 表达式 2</td>
+<td style="text-align:left">两个表达式都是真</td>
 </tr>
 <tr>
-<td align="left">表达式 1 -o 表达式 2</td>
-<td align="left">两个表达式有一个真</td>
+<td style="text-align:left">表达式 1 -o 表达式 2</td>
+<td style="text-align:left">两个表达式有一个真</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>然后是各种逻辑参数</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">结果逻辑</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">结果逻辑</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-n</td>
-<td align="left">字符串字符串长度非零</td>
+<tbody>
+<tr>
+<td style="text-align:left">-n</td>
+<td style="text-align:left">字符串字符串长度非零</td>
 </tr>
 <tr>
-<td align="left">STRING</td>
-<td align="left">等价于 -n 字符串</td>
+<td style="text-align:left">STRING</td>
+<td style="text-align:left">等价于 -n 字符串</td>
 </tr>
 <tr>
-<td align="left">-z 字符串</td>
-<td align="left">字符串的长度为 0</td>
+<td style="text-align:left">-z 字符串</td>
+<td style="text-align:left">字符串的长度为 0</td>
 </tr>
 <tr>
-<td align="left">字符串 1 = 字符串 2</td>
-<td align="left">字符串相等</td>
+<td style="text-align:left">字符串 1 = 字符串 2</td>
+<td style="text-align:left">字符串相等</td>
 </tr>
 <tr>
-<td align="left">字符串 1 != 字符串 2</td>
-<td align="left">字符串不相等</td>
+<td style="text-align:left">字符串 1 != 字符串 2</td>
+<td style="text-align:left">字符串不相等</td>
 </tr>
 <tr>
-<td align="left">整数 1 -eq 整数 2</td>
-<td align="left">整数 1 与整数 2 相等</td>
+<td style="text-align:left">整数 1 -eq 整数 2</td>
+<td style="text-align:left">整数 1 与整数 2 相等</td>
 </tr>
 <tr>
-<td align="left">整数 1 -ge 整数 2</td>
-<td align="left">整数 1 大于或等于整数 2</td>
+<td style="text-align:left">整数 1 -ge 整数 2</td>
+<td style="text-align:left">整数 1 大于或等于整数 2</td>
 </tr>
 <tr>
-<td align="left">整数 1 -gt 整数 2</td>
-<td align="left">整数 1 大于整数 2</td>
+<td style="text-align:left">整数 1 -gt 整数 2</td>
+<td style="text-align:left">整数 1 大于整数 2</td>
 </tr>
 <tr>
-<td align="left">整数 1 -le 整数 2</td>
-<td align="left">整数 1 小于或等于整数 2</td>
+<td style="text-align:left">整数 1 -le 整数 2</td>
+<td style="text-align:left">整数 1 小于或等于整数 2</td>
 </tr>
 <tr>
-<td align="left">整数 1 -lt 整数 2</td>
-<td align="left">整数 1 小于整数 2</td>
+<td style="text-align:left">整数 1 -lt 整数 2</td>
+<td style="text-align:left">整数 1 小于整数 2</td>
 </tr>
 <tr>
-<td align="left">整数 1 -ne 整数 2</td>
-<td align="left">整数 1 和整数 2 不相等</td>
+<td style="text-align:left">整数 1 -ne 整数 2</td>
+<td style="text-align:left">整数 1 和整数 2 不相等</td>
 </tr>
 <tr>
-<td align="left">文件 1 -ef 文件 2</td>
-<td align="left">文件 1 和文件 2 拥有相同的设备编号与 inode 编号</td>
+<td style="text-align:left">文件 1 -ef 文件 2</td>
+<td style="text-align:left">文件 1 和文件 2 拥有相同的设备编号与 inode 编号</td>
 </tr>
 <tr>
-<td align="left">文件 1 -nt 文件 2</td>
-<td align="left">文件 1 在修改时间上新于文件 2</td>
+<td style="text-align:left">文件 1 -nt 文件 2</td>
+<td style="text-align:left">文件 1 在修改时间上新于文件 2</td>
 </tr>
 <tr>
-<td align="left">文件 1 -ot 文件 2</td>
-<td align="left">文件 1 比文件 2 更旧</td>
+<td style="text-align:left">文件 1 -ot 文件 2</td>
+<td style="text-align:left">文件 1 比文件 2 更旧</td>
 </tr>
 <tr>
-<td align="left">-b 文件</td>
-<td align="left">文件存在且为块特殊文件</td>
+<td style="text-align:left">-b 文件</td>
+<td style="text-align:left">文件存在且为块特殊文件</td>
 </tr>
 <tr>
-<td align="left">-c 文件</td>
-<td align="left">文件存在且为字符特殊文件</td>
+<td style="text-align:left">-c 文件</td>
+<td style="text-align:left">文件存在且为字符特殊文件</td>
 </tr>
 <tr>
-<td align="left">-d 文件</td>
-<td align="left">文件存在且为目录</td>
+<td style="text-align:left">-d 文件</td>
+<td style="text-align:left">文件存在且为目录</td>
 </tr>
 <tr>
-<td align="left">-e 文件</td>
-<td align="left">文件存在</td>
+<td style="text-align:left">-e 文件</td>
+<td style="text-align:left">文件存在</td>
 </tr>
 <tr>
-<td align="left">-f 文件</td>
-<td align="left">文件存在且为普通文件</td>
+<td style="text-align:left">-f 文件</td>
+<td style="text-align:left">文件存在且为普通文件</td>
 </tr>
 <tr>
-<td align="left">-g 文件</td>
-<td align="left">文件存在且被设置了 set-group-ID 位</td>
+<td style="text-align:left">-g 文件</td>
+<td style="text-align:left">文件存在且被设置了 set-group-ID 位</td>
 </tr>
 <tr>
-<td align="left">-g 文件</td>
-<td align="left">文件存在且为有效组 ID 所有</td>
+<td style="text-align:left">-g 文件</td>
+<td style="text-align:left">文件存在且为有效组 ID 所有</td>
 </tr>
 <tr>
-<td align="left">-h 文件</td>
-<td align="left">文件存在且为一个符号链接(与 -L 相同)</td>
+<td style="text-align:left">-h 文件</td>
+<td style="text-align:left">文件存在且为一个符号链接(与 -L 相同)</td>
 </tr>
 <tr>
-<td align="left">-k 文件</td>
-<td align="left">文件存在且被设置粘着位</td>
+<td style="text-align:left">-k 文件</td>
+<td style="text-align:left">文件存在且被设置粘着位</td>
 </tr>
 <tr>
-<td align="left">-L 文件</td>
-<td align="left">文件存在且为一个符号链接(与 -h 相同)</td>
+<td style="text-align:left">-L 文件</td>
+<td style="text-align:left">文件存在且为一个符号链接(与 -h 相同)</td>
 </tr>
 <tr>
-<td align="left">-O 文件</td>
-<td align="left">文件存在且为有效用户 ID 所有</td>
+<td style="text-align:left">-O 文件</td>
+<td style="text-align:left">文件存在且为有效用户 ID 所有</td>
 </tr>
 <tr>
-<td align="left">-p 文件</td>
-<td align="left">文件存在且为命名管道</td>
+<td style="text-align:left">-p 文件</td>
+<td style="text-align:left">文件存在且为命名管道</td>
 </tr>
 <tr>
-<td align="left">-r 文件</td>
-<td align="left">文件存在且被授予读权限</td>
+<td style="text-align:left">-r 文件</td>
+<td style="text-align:left">文件存在且被授予读权限</td>
 </tr>
 <tr>
-<td align="left">-s 文件</td>
-<td align="left">文件存在且其大小大于零</td>
+<td style="text-align:left">-s 文件</td>
+<td style="text-align:left">文件存在且其大小大于零</td>
 </tr>
 <tr>
-<td align="left">-S 文件</td>
-<td align="left">文件存在且为套接字</td>
+<td style="text-align:left">-S 文件</td>
+<td style="text-align:left">文件存在且为套接字</td>
 </tr>
 <tr>
-<td align="left">-t FD</td>
-<td align="left">文件描述符 FD 在某个终端打开</td>
+<td style="text-align:left">-t FD</td>
+<td style="text-align:left">文件描述符 FD 在某个终端打开</td>
 </tr>
 <tr>
-<td align="left">-u 文件</td>
-<td align="left">文件存在且被设置了 set-user-ID 位</td>
+<td style="text-align:left">-u 文件</td>
+<td style="text-align:left">文件存在且被设置了 set-user-ID 位</td>
 </tr>
 <tr>
-<td align="left">-w 文件</td>
-<td align="left">文件存在且被赋予了写权限</td>
+<td style="text-align:left">-w 文件</td>
+<td style="text-align:left">文件存在且被赋予了写权限</td>
 </tr>
 <tr>
-<td align="left">-x 文件</td>
-<td align="left">文件存在且被授予执行(或搜索)权限</td>
+<td style="text-align:left">-x 文件</td>
+<td style="text-align:left">文件存在且被授予执行(或搜索)权限</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="3-2-2-中括号判断表达式"><a href="#3-2-2-中括号判断表达式" class="headerlink" title="3.2.2 中括号判断表达式"></a>3.2.2 中括号判断表达式</h4><ul>
 <li>文件判断参数 [ options file ]</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">结果逻辑</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">结果逻辑</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-d</td>
-<td align="left">测试文件是否为目录类型</td>
+<tbody>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">测试文件是否为目录类型</td>
 </tr>
 <tr>
-<td align="left">-e</td>
-<td align="left">测试文件是否存在</td>
+<td style="text-align:left">-e</td>
+<td style="text-align:left">测试文件是否存在</td>
 </tr>
 <tr>
-<td align="left">-f</td>
-<td align="left">判断是否为一般文件</td>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">判断是否为一般文件</td>
 </tr>
 <tr>
-<td align="left">-r</td>
-<td align="left">测试当前用户是否有权限读取</td>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">测试当前用户是否有权限读取</td>
 </tr>
 <tr>
-<td align="left">-w</td>
-<td align="left">测试当前用户是否有权限写入</td>
+<td style="text-align:left">-w</td>
+<td style="text-align:left">测试当前用户是否有权限写入</td>
 </tr>
 <tr>
-<td align="left">-x</td>
-<td align="left">测试当前用户是否有权限执行</td>
+<td style="text-align:left">-x</td>
+<td style="text-align:left">测试当前用户是否有权限执行</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>数字判断参数[ num1 options num2 ]</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">结果逻辑</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">结果逻辑</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-eq</td>
-<td align="left">是否等于</td>
+<tbody>
+<tr>
+<td style="text-align:left">-eq</td>
+<td style="text-align:left">是否等于</td>
 </tr>
 <tr>
-<td align="left">-ne</td>
-<td align="left">是否不等于</td>
+<td style="text-align:left">-ne</td>
+<td style="text-align:left">是否不等于</td>
 </tr>
 <tr>
-<td align="left">-gt</td>
-<td align="left">是否大于</td>
+<td style="text-align:left">-gt</td>
+<td style="text-align:left">是否大于</td>
 </tr>
 <tr>
-<td align="left">-lt</td>
-<td align="left">是否小于</td>
+<td style="text-align:left">-lt</td>
+<td style="text-align:left">是否小于</td>
 </tr>
 <tr>
-<td align="left">-le</td>
-<td align="left">是否等于或小于</td>
+<td style="text-align:left">-le</td>
+<td style="text-align:left">是否等于或小于</td>
 </tr>
 <tr>
-<td align="left">-ge</td>
-<td align="left">是否大于或等于</td>
+<td style="text-align:left">-ge</td>
+<td style="text-align:left">是否大于或等于</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>字符串判断参数 [ options string ]</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">结果逻辑</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">结果逻辑</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">=</td>
-<td align="left">比较字符串内容是否相同</td>
+<tbody>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">比较字符串内容是否相同</td>
 </tr>
 <tr>
-<td align="left">!=</td>
-<td align="left">比较字符串内容是否不同</td>
+<td style="text-align:left">!=</td>
+<td style="text-align:left">比较字符串内容是否不同</td>
 </tr>
 <tr>
-<td align="left">-z</td>
-<td align="left">判断字符串是否为空</td>
+<td style="text-align:left">-z</td>
+<td style="text-align:left">判断字符串是否为空</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="3-3-流控制"><a href="#3-3-流控制" class="headerlink" title="3.3 流控制"></a>3.3 流控制</h3><h4 id="3-3-1-单行流控制"><a href="#3-3-1-单行流控制" class="headerlink" title="3.3.1 单行流控制"></a>3.3.1 单行流控制</h4><p>通用格式: <code>command1 标志 command2</code></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">标志</th>
-<th align="left">功能</th>
+<th style="text-align:left">标志</th>
+<th style="text-align:left">功能</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">&amp;&amp;</td>
-<td align="left">上一条命令成功,才执行下一条指令</td>
+<tbody>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:left">上一条命令成功,才执行下一条指令</td>
 </tr>
 <tr>
-<td align="left">||</td>
-<td align="left">上一条指令失败,才执行下一条指令</td>
+<td style="text-align:left">\</td>
+<td style="text-align:left">\</td>
+<td></td>
+<td>上一条指令失败,才执行下一条指令</td>
 </tr>
 <tr>
-<td align="left">;;</td>
-<td align="left">无条件执行下一条指令</td>
+<td style="text-align:left">;;</td>
+<td style="text-align:left">无条件执行下一条指令</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="3-3-2-判断-amp-分支"><a href="#3-3-2-判断-amp-分支" class="headerlink" title="3.3.2 判断 &amp; 分支"></a>3.3.2 判断 &amp; 分支</h4><h5 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if [ 判断语句 ];then</span><br><span class="line">  command</span><br><span class="line">elif [ 判断语句 ];then</span><br><span class="line">  command</span><br><span class="line">else</span><br><span class="line">  command</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <h5 id="case-语句"><a href="#case-语句" class="headerlink" title="case 语句"></a>case 语句</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">case $&#123;变量&#125; in</span><br><span class="line">条件范围)</span><br><span class="line">  command</span><br><span class="line">  ;;</span><br><span class="line">条件范围)</span><br><span class="line">  command</span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  command</span><br><span class="line">  ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
 <h4 id="3-3-3-循环语句"><a href="#3-3-3-循环语句" class="headerlink" title="3.3.3 循环语句"></a>3.3.3 循环语句</h4><h5 id="for-语句"><a href="#for-语句" class="headerlink" title="for 语句"></a>for 语句</h5><p>for 语句中的取值列表可以为字面量<br><code>1 2 3 4</code>,<code>1...10</code><br>可以为变量<br><code>$&#123;label&#125;</code></p>
@@ -518,7 +543,6 @@
 </ul>
 <p>以上两个东西在运行的时候,需要设置<code>TerminalKind</code>为<code>integrated</code>(即用 vscode 内置终端运行)<br>否则在读取用户输入会有问题(Code Runner 在插件里设置,Bash Debug 在 launch.json 中设置)</p>
 <img src="http://img.yishiyu.world/blogs/images/ShellScript学习笔记/vscode.png">
-
 <h2 id="5-周期执行任务"><a href="#5-周期执行任务" class="headerlink" title="5. 周期执行任务"></a>5. 周期执行任务</h2><h3 id="5-1-在指定时间执行一个任务"><a href="#5-1-在指定时间执行一个任务" class="headerlink" title="5.1 在指定时间执行一个任务"></a>5.1 在指定时间执行一个任务</h3><p>以下内容来自 man 手册</p>
 <p>at 命令 用于在指定时间执行命令<br>at 允许使用一套相当复杂的指定时间的方法<br>它能够接受在当天的 hh:mm 式的时间指定.假如该时间已过去,那么就放在第二天执行<br>当然也能够使用 midnight,noon,teatime(一般是下午 4 点)等比较模糊的词语来指定时间<br>用户还能够采用 12 小时计时制,即在时间后面加上 AM 或 PM 来说明是上午还是下午<br>也能够指定命令执行的具体日期,指定格式为 month day 或 mm/dd/yy 或 dd.mm.yy<br>指定的日期必须跟在指定时间的后面</p>
 <p>上面介绍的都是绝对计时法,其实还能够使用相对计时法<br>指定格式为：now + count time-units<br>now 就是当前时间<br>time-units 是时间单位,这里能够是 minutes,hours,days,weeks<br>count 是时间的数量,究竟是几天,还是几小时,等等<br>更有一种计时方法就是直接使用 today(今天)、tomorrow(明天)来指定完成命令的时间</p>

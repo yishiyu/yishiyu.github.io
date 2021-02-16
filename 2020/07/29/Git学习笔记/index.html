@@ -144,7 +144,7 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/012.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-29T11:39:06.000Z" title="发表于 2020-07-29 19:39:06">2020-07-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:18:12.052Z" title="更新于 2021-02-09 11:18:12">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Git-学习笔记"><a href="#Git-学习笔记" class="headerlink" title="Git 学习笔记"></a>Git 学习笔记</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/012.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-29T11:39:06.000Z" title="发表于 2020-07-29 19:39:06">2020-07-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:18:12.052Z" title="更新于 2021-02-09 11:18:12">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Git-学习笔记"><a href="#Git-学习笔记" class="headerlink" title="Git 学习笔记"></a>Git 学习笔记</h1><blockquote>
 <ol>
 <li>Git 基础知识</li>
 <li>Git 入门</li>
@@ -152,7 +152,6 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-
 <h2 id="1-Git-基础知识"><a href="#1-Git-基础知识" class="headerlink" title="1. Git 基础知识"></a>1. Git 基础知识</h2><p><a target="_blank" rel="noopener" href="http://www.zsythink.net/archives/3290">[ 相关文章|Git 之旅|朱双印个人日志 ]</a></p>
 <ol>
 <li><p>Git 的特点</p>
@@ -162,7 +161,7 @@
 </li>
 <li><p>Git 的设置</p>
 <blockquote>
-<p>git config –system：使对应配置针对系统内所有的用户有效<br>git config –global：使对应配置针对当前系统用户的所有仓库生效<br>git config –local：使对应配置只针对当前仓库有效<br>配置个人信息<br>git config –global <code>user.name</code> “<code>yishiyu</code>“<br>git config –global <code>user.email</code> “<code>yishiyu@example.com</code>“</p>
+<p>git config —system：使对应配置针对系统内所有的用户有效<br>git config —global：使对应配置针对当前系统用户的所有仓库生效<br>git config —local：使对应配置只针对当前仓库有效<br>配置个人信息<br>git config —global <code>user.name</code> “<code>yishiyu</code>“<br>git config —global <code>user.email</code> “<code>yishiyu@example.com</code>“</p>
 </blockquote>
 </li>
 </ol>
@@ -173,8 +172,7 @@
 <p>初始化后,原文件夹中所有的文件都进入了 untracked 状态<br>需要手动 add 并 commit 以完成初始化</p>
 </blockquote>
 <img src="http://img.yishiyu.world/blogs/images/Git学习笔记/2.1.1-1.png">
-
-<ol start="2">
+<ol>
 <li>克隆现有仓库</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 仓库url地址 仓库文件夹</span><br></pre></td></tr></table></figure>
@@ -184,112 +182,118 @@
 <li>未跟踪:下一次提交的时候不会记录这个文件,相当于把这个文件删除掉了</li>
 <li>未修改:文件未修改</li>
 <li>已修改:文件已经修改,但是还没有暂存,下次提交的时候不会记录文件的修改</li>
-<li>已暂存:文件已暂存,下次提交时会提交给新的版本</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>git add 命令是一个多功能命令,跟踪文件和暂存文件都是用 add 命令</li>
+<li><p>已暂存:文件已暂存,下次提交时会提交给新的版本</p>
+</li>
+<li><p>git add 命令是一个多功能命令,跟踪文件和暂存文件都是用 add 命令</p>
+</li>
 <li>git status 命令可以查看文件状态,-s 参数指定短格式输出</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>短格式输出文件状态的时候,文件的标记会有两列,左边的一列表示已暂存的状态,右边一列表示未缓存状态<br>?? 表示文件未被追踪</p>
 </blockquote>
 <img src="http://img.yishiyu.world/blogs/images/Git学习笔记/2.2.4-1.png">
-
 <h3 id="2-3-忽略文件"><a href="#2-3-忽略文件" class="headerlink" title="2.3 忽略文件"></a>2.3 忽略文件</h3><p>可以在仓库文件夹中编写.gitignore 文件以指定需要忽略的文件</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">规则</th>
-<th align="center">含义</th>
+<th style="text-align:center">规则</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">空行或以#开头的行</td>
-<td align="center">忽略</td>
+<tbody>
+<tr>
+<td style="text-align:center">空行或以#开头的行</td>
+<td style="text-align:center">忽略</td>
 </tr>
 <tr>
-<td align="center">标准的 glob 模式</td>
-<td align="center">简化的正则表达式</td>
+<td style="text-align:center">标准的 glob 模式</td>
+<td style="text-align:center">简化的正则表达式</td>
 </tr>
 <tr>
-<td align="center">以/开头的模式</td>
-<td align="center">禁止递归</td>
+<td style="text-align:center">以/开头的模式</td>
+<td style="text-align:center">禁止递归</td>
 </tr>
 <tr>
-<td align="center">以/结尾的模式</td>
-<td align="center">目录下的所有文件</td>
+<td style="text-align:center">以/结尾的模式</td>
+<td style="text-align:center">目录下的所有文件</td>
 </tr>
 <tr>
-<td align="center">以!开始的模式</td>
-<td align="center">取反</td>
+<td style="text-align:center">以!开始的模式</td>
+<td style="text-align:center">取反</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">glob 字符</th>
-<th align="center">含义</th>
+<th style="text-align:center">glob 字符</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">*</td>
-<td align="center">匹配零个或多个字符</td>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">匹配零个或多个字符</td>
 </tr>
 <tr>
-<td align="center">[abc]</td>
-<td align="center">中括号内的字符中的一个</td>
+<td style="text-align:center">[abc]</td>
+<td style="text-align:center">中括号内的字符中的一个</td>
 </tr>
 <tr>
-<td align="center">[1-9]</td>
-<td align="center">中括号内字符范围内字符</td>
+<td style="text-align:center">[1-9]</td>
+<td style="text-align:center">中括号内字符范围内字符</td>
 </tr>
 <tr>
-<td align="center">?</td>
-<td align="center">任意单个字符</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">任意单个字符</td>
 </tr>
 <tr>
-<td align="center">**</td>
-<td align="center">匹配嵌套目录</td>
+<td style="text-align:center">**</td>
+<td style="text-align:center">匹配嵌套目录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">范例</th>
-<th align="center">含义</th>
+<th style="text-align:center">范例</th>
+<th style="text-align:center">含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">*.a</td>
-<td align="center">忽略.a 类型的文件</td>
+<tbody>
+<tr>
+<td style="text-align:center">*.a</td>
+<td style="text-align:center">忽略.a 类型的文件</td>
 </tr>
 <tr>
-<td align="center">!lib.a</td>
-<td align="center">依然跟踪 lib.a,即使上一行指定忽略</td>
+<td style="text-align:center">!lib.a</td>
+<td style="text-align:center">依然跟踪 lib.a,即使上一行指定忽略</td>
 </tr>
 <tr>
-<td align="center">/TODO</td>
-<td align="center">忽略当前文件夹中的 TODO 文件</td>
+<td style="text-align:center">/TODO</td>
+<td style="text-align:center">忽略当前文件夹中的 TODO 文件</td>
 </tr>
 <tr>
-<td align="center">build/</td>
-<td align="center">忽略 build 文件夹中的所有文件</td>
+<td style="text-align:center">build/</td>
+<td style="text-align:center">忽略 build 文件夹中的所有文件</td>
 </tr>
 <tr>
-<td align="center">doc/*.txt</td>
-<td align="center">忽略 doc 文件夹中的所有的 txt 文件</td>
+<td style="text-align:center">doc/*.txt</td>
+<td style="text-align:center">忽略 doc 文件夹中的所有的 txt 文件</td>
 </tr>
 <tr>
-<td align="center">doc/**/*.pdf</td>
-<td align="center">忽略当前 doc/目录下的所有 pdf 文件</td>
+<td style="text-align:center">doc/**/*.pdf</td>
+<td style="text-align:center">忽略当前 doc/目录下的所有 pdf 文件</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="2-4-查看已暂存的和未暂存的变更"><a href="#2-4-查看已暂存的和未暂存的变更" class="headerlink" title="2.4 查看已暂存的和未暂存的变更"></a>2.4 查看已暂存的和未暂存的变更</h3><p>使用 git dif 命令可以查看已缓存的文件和未缓存的文件之间的差别<br>但是有一说一感觉还是用 gui 界面看比较舒服,vscode 装个插件基本完美</p>
 <img src="http://img.yishiyu.world/blogs/images/Git学习笔记/2.2.6-1.png">
-
 <h3 id="2-5-提交变更"><a href="#2-5-提交变更" class="headerlink" title="2.5 提交变更"></a>2.5 提交变更</h3><p>在修改完文件之后,使用 git add 命令将其添加到暂存区,再使用 git commit 命令提交到仓库</p>
 <p>同时 git commit -a 命令可以跳过暂存区,直接把已跟踪的所有文件提交</p>
 <p>一般来说直接通过-m 参数添加提交注释就行了<br>同上,使用 vscode 体验极好</p>
@@ -297,63 +301,67 @@
 <p>同上,vscode 真香…</p>
 <h3 id="2-7-移动文件"><a href="#2-7-移动文件" class="headerlink" title="2.7 移动文件"></a>2.7 移动文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm 命令集成了三条命令:</span><br><span class="line">mv file1 file2</span><br><span class="line">git rm file</span><br><span class="line">git rm file2</span><br></pre></td></tr></table></figure>
 <p>同上,vscode 真香…</p>
-<h3 id="2-8-查看提交历史"><a href="#2-8-查看提交历史" class="headerlink" title="2.8 查看提交历史"></a>2.8 查看提交历史</h3><p>git log 提供查看提交历史功能<br>-p 选项开启查看差异功能<br>-n 表示查看多少个记录,n 为数字<br>–stat 开启查看统计信息<br>–pretty 指定输出记录的格式<br>–graph 输出简单分支图</p>
+<h3 id="2-8-查看提交历史"><a href="#2-8-查看提交历史" class="headerlink" title="2.8 查看提交历史"></a>2.8 查看提交历史</h3><p>git log 提供查看提交历史功能<br>-p 选项开启查看差异功能<br>-n 表示查看多少个记录,n 为数字<br>—stat 开启查看统计信息<br>—pretty 指定输出记录的格式<br>—graph 输出简单分支图</p>
 <p>这种带看差异的直接上 vscode</p>
 <h3 id="2-9-撤销操作"><a href="#2-9-撤销操作" class="headerlink" title="2.9 撤销操作"></a>2.9 撤销操作</h3><ol>
 <li><p>覆盖提交</p>
-<p>即上次提交时少提交了某个文件或者 comment 写错了<br>可以使用 git commit –amend 选项覆盖提交(只产生一次提交)</p>
+<p>即上次提交时少提交了某个文件或者 comment 写错了<br>可以使用 git commit —amend 选项覆盖提交(只产生一次提交)</p>
 </li>
 <li><p>撤销已缓存文件</p>
-<p>在 git status 时会有提示<br>即:git reset HEAD &lt;file&gt;<br>但是需要注意不要轻易使用–hard 参数<br>没有这个参数是只修改暂存状态<br>加上这个参数会同时修改工作区中的文件本身</p>
+<p>在 git status 时会有提示<br>即:git reset HEAD \<file\><br>但是需要注意不要轻易使用—hard 参数<br>没有这个参数是只修改暂存状态<br>加上这个参数会同时修改工作区中的文件本身</p>
 </li>
 <li><p>撤销对文件的修改</p>
-<p>同上也会有提示<br>即:git checkout – &lt;file&gt;<br>但是 git checkout 很危险,它会用之前的版本覆盖指定文件</p>
+<p>同上也会有提示<br>即:git checkout — \<file\><br>但是 git checkout 很危险,它会用之前的版本覆盖指定文件</p>
 </li>
 </ol>
-<h3 id="2-10-远程仓库的使用"><a href="#2-10-远程仓库的使用" class="headerlink" title="2.10 远程仓库的使用"></a>2.10 远程仓库的使用</h3><table>
+<h3 id="2-10-远程仓库的使用"><a href="#2-10-远程仓库的使用" class="headerlink" title="2.10 远程仓库的使用"></a>2.10 远程仓库的使用</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">git remote</td>
-<td align="center">显示所有远程仓库</td>
+<tbody>
+<tr>
+<td style="text-align:center">git remote</td>
+<td style="text-align:center">显示所有远程仓库</td>
 </tr>
 <tr>
-<td align="center">git remote -v</td>
-<td align="center">显示仓库与 url</td>
+<td style="text-align:center">git remote -v</td>
+<td style="text-align:center">显示仓库与 url</td>
 </tr>
 <tr>
-<td align="center">git remote add</td>
-<td align="center">添加新的仓库</td>
+<td style="text-align:center">git remote add</td>
+<td style="text-align:center">添加新的仓库</td>
 </tr>
 <tr>
-<td align="center">git remote show</td>
-<td align="center">显示某个仓库详情</td>
+<td style="text-align:center">git remote show</td>
+<td style="text-align:center">显示某个仓库详情</td>
 </tr>
 <tr>
-<td align="center">git remote rename</td>
-<td align="center">重命名远程仓库</td>
+<td style="text-align:center">git remote rename</td>
+<td style="text-align:center">重命名远程仓库</td>
 </tr>
 <tr>
-<td align="center">git remote rm</td>
-<td align="center">删除远程仓库</td>
+<td style="text-align:center">git remote rm</td>
+<td style="text-align:center">删除远程仓库</td>
 </tr>
 <tr>
-<td align="center">git retch</td>
-<td align="center">从远程仓库中获取数据(不自动合并)</td>
+<td style="text-align:center">git retch</td>
+<td style="text-align:center">从远程仓库中获取数据(不自动合并)</td>
 </tr>
 <tr>
-<td align="center">git pull</td>
-<td align="center">从远程仓库获取数据并自动合并</td>
+<td style="text-align:center">git pull</td>
+<td style="text-align:center">从远程仓库获取数据并自动合并</td>
 </tr>
 <tr>
-<td align="center">git push name branch</td>
-<td align="center">把数据推送到远程仓库</td>
+<td style="text-align:center">git push name branch</td>
+<td style="text-align:center">把数据推送到远程仓库</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="2-11-命令别名"><a href="#2-11-命令别名" class="headerlink" title="2.11 命令别名"></a>2.11 命令别名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 设置之后 ci 等价于 commit</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line"># 设置之后 unstage 等价于 reset HEAD</span><br><span class="line">git config --global alias.unstage &#39;reset HEAD&#39;</span><br></pre></td></tr></table></figure>
 <h2 id="3-Git-分支特性"><a href="#3-Git-分支特性" class="headerlink" title="3. Git 分支特性"></a>3. Git 分支特性</h2><h3 id="3-1-基本知识"><a href="#3-1-基本知识" class="headerlink" title="3.1 基本知识"></a>3.1 基本知识</h3><h4 id="3-1-1-分支"><a href="#3-1-1-分支" class="headerlink" title="3.1.1 分支"></a>3.1.1 分支</h4><p>一个版本分支,不同的分支互不影响<br>不同分支可以合并,变基</p>
 <p>master 分支:系统默认分支(其实并不是特殊分支,可以改成其他名字),常用来发布稳定版本<br>develop/next 分支:需要手动创建,常用来存放测试版<br>topic 分支:需要手动创建,用来存放某一主题方向的版本</p>

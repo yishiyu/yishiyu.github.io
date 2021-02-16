@@ -145,7 +145,7 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/002.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GNU工具链系列(二)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-19T07:13:48.000Z" title="发表于 2020-10-19 15:13:48">2020-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:12:44.052Z" title="更新于 2021-02-09 11:12:44">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="GCC-编译调试套装"><a href="#GCC-编译调试套装" class="headerlink" title="GCC 编译调试套装"></a>GCC 编译调试套装</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/002.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GNU工具链系列(二)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-19T07:13:48.000Z" title="发表于 2020-10-19 15:13:48">2020-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:12:44.052Z" title="更新于 2021-02-09 11:12:44">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="GCC-编译调试套装"><a href="#GCC-编译调试套装" class="headerlink" title="GCC 编译调试套装"></a>GCC 编译调试套装</h1><blockquote>
 <ol>
 <li>概述</li>
 <li>运行时库简介</li>
@@ -156,7 +156,6 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-
 <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h2><p>GCC 一般有两个解释(<strong>下文中除非特殊说明,GCC 指广义工具链集合</strong>):</p>
 <ul>
 <li>GNU Compiler Collection:GNU 编译工具链集合,能编译多种语言</li>
@@ -180,121 +179,133 @@
 <p>其中动态链接库也叫共享库,因为其在内存中只有一份副本,所有的程序共用这些函数</p>
 <h3 id="2-2-C-C-标准库"><a href="#2-2-C-C-标准库" class="headerlink" title="2.2 C/C++标准库"></a>2.2 C/C++标准库</h3><p>参考链接:<a target="_blank" rel="noopener" href="https://blog.csdn.net/haibosdu/article/details/77094833">[理清 gcc、libc、libstdc++的关系 | 唐装鼠的博客 | CSDN]</a><br>该文标注了<a target="_blank" rel="noopener" href="http://www.chongh.wiki/blog/2016/05/25/lib-compile-link/">来源</a>,但是源网站似乎已经挂了…</p>
 <p>C/C++标准一部分描述了语法定义,一部分定义了标准库的接口(但并没有实现)<br>而 GCC 库则是对标准中定义的库的实现</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">库文件</th>
-<th align="left">描述</th>
+<th style="text-align:left">库文件</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">glibc</td>
-<td align="left">GNU C 标准库,后成为 Linux 的标准 C 库(动态库)</td>
+<tbody>
+<tr>
+<td style="text-align:left">glibc</td>
+<td style="text-align:left">GNU C 标准库,后成为 Linux 的标准 C 库(动态库)</td>
 </tr>
 <tr>
-<td align="left">libstdc++</td>
-<td align="left">GNU C++标准库,与 GCC 绑定安装</td>
+<td style="text-align:left">libstdc++</td>
+<td style="text-align:left">GNU C++标准库,与 GCC 绑定安装</td>
 </tr>
 <tr>
-<td align="left">eglibc</td>
-<td align="left">一个面向嵌入式系统的 C 库</td>
+<td style="text-align:left">eglibc</td>
+<td style="text-align:left">一个面向嵌入式系统的 C 库</td>
 </tr>
 <tr>
-<td align="left">newlib</td>
-<td align="left">另一个面向嵌入式系统的 C 库</td>
+<td style="text-align:left">newlib</td>
+<td style="text-align:left">另一个面向嵌入式系统的 C 库</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>C 标准库与 Linux 操作系统高度绑定(Linux 自带 C 标准库)<br>C 标准库是 Linux 系统中最底层的 API,封装了很多系统调用<br>同时其也封装了一些上层应用函数的必要功能(如 string,malloc,signal 等)<br>最开始 Linux 使用的 C 标准库是 libc,后来用过 klibc,uclibc.现在使用最多的就是 glibc(Debian,Redhat 都是 glibc 及其变种)</li>
 <li>C++标准库不与操作系统绑定(以下以 libstdc++举例)<br>libstdc++与 GCC 绑定(安装 GCC 时自动安装 libstdc++)<br>但是 libstdc++不与内核打交道,而是通过 glibc 调用内核功能</li>
 </ul>
 <h2 id="3-Binutils-工具集"><a href="#3-Binutils-工具集" class="headerlink" title="3. Binutils 工具集"></a>3. Binutils 工具集</h2><p>参考资料链接:<a target="_blank" rel="noopener" href="https://suda-morris.github.io/blog/cs/gcc_toolchains.html#binutils">[GCC 工具链基础 | suda-morris 个人博客]</a></p>
 <p>Binutils 是一组二进制程序的处理工具:</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">工具</th>
-<th align="left">作用</th>
+<th style="text-align:left">工具</th>
+<th style="text-align:left">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">addr2line</td>
-<td align="left">可以从程序地址得到源文件中对应的代码行,可以帮助调试器定位代码位置</td>
+<tbody>
+<tr>
+<td style="text-align:left">addr2line</td>
+<td style="text-align:left">可以从程序地址得到源文件中对应的代码行,可以帮助调试器定位代码位置</td>
 </tr>
 <tr>
-<td align="left">as</td>
-<td align="left">汇编工具</td>
+<td style="text-align:left">as</td>
+<td style="text-align:left">汇编工具</td>
 </tr>
 <tr>
-<td align="left">ld</td>
-<td align="left">链接工具</td>
+<td style="text-align:left">ld</td>
+<td style="text-align:left">链接工具</td>
 </tr>
 <tr>
-<td align="left">ar</td>
-<td align="left">用于创建静态库</td>
+<td style="text-align:left">ar</td>
+<td style="text-align:left">用于创建静态库</td>
 </tr>
 <tr>
-<td align="left">ldd</td>
-<td align="left">可以用于查看一个可执行程序依赖的共享库</td>
+<td style="text-align:left">ldd</td>
+<td style="text-align:left">可以用于查看一个可执行程序依赖的共享库</td>
 </tr>
 <tr>
-<td align="left">objcopy</td>
-<td align="left">转换可执行文件的格式(如.bin 转换为.elf)</td>
+<td style="text-align:left">objcopy</td>
+<td style="text-align:left">转换可执行文件的格式(如.bin 转换为.elf)</td>
 </tr>
 <tr>
-<td align="left">objdump</td>
-<td align="left">反汇编工具</td>
+<td style="text-align:left">objdump</td>
+<td style="text-align:left">反汇编工具</td>
 </tr>
 <tr>
-<td align="left">readelf</td>
-<td align="left">elf 文件查看工具</td>
+<td style="text-align:left">readelf</td>
+<td style="text-align:left">elf 文件查看工具</td>
 </tr>
 <tr>
-<td align="left">size</td>
-<td align="left">列出可执行文件每个部分的尺寸和总尺寸,代码段,数据段,总大小等</td>
+<td style="text-align:left">size</td>
+<td style="text-align:left">列出可执行文件每个部分的尺寸和总尺寸,代码段,数据段,总大小等</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="4-GCC-C-C-编译器"><a href="#4-GCC-C-C-编译器" class="headerlink" title="4. GCC C/C++ 编译器"></a>4. GCC C/C++ 编译器</h2><p>参考资料链接:<a target="_blank" rel="noopener" href="https://suda-morris.github.io/blog/cs/gcc_toolchains.html#binutils">[GCC 工具链基础 | suda-morris 个人博客]</a></p>
-<h3 id="4-1-GCC-编译选项"><a href="#4-1-GCC-编译选项" class="headerlink" title="4.1 GCC 编译选项"></a>4.1 GCC 编译选项</h3><table>
+<h3 id="4-1-GCC-编译选项"><a href="#4-1-GCC-编译选项" class="headerlink" title="4.1 GCC 编译选项"></a>4.1 GCC 编译选项</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">参数</th>
-<th align="left">功能</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">功能</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">-o</td>
-<td align="left">指定生成文件名</td>
+<tbody>
+<tr>
+<td style="text-align:left">-o</td>
+<td style="text-align:left">指定生成文件名</td>
 </tr>
 <tr>
-<td align="left">-E</td>
-<td align="left">生成.i 格式的预处理文件</td>
+<td style="text-align:left">-E</td>
+<td style="text-align:left">生成.i 格式的预处理文件</td>
 </tr>
 <tr>
-<td align="left">-S</td>
-<td align="left">生成.s 格式的汇编文件</td>
+<td style="text-align:left">-S</td>
+<td style="text-align:left">生成.s 格式的汇编文件</td>
 </tr>
 <tr>
-<td align="left">-c</td>
-<td align="left">生成.o 格式的中间文件</td>
+<td style="text-align:left">-c</td>
+<td style="text-align:left">生成.o 格式的中间文件</td>
 </tr>
 <tr>
-<td align="left">-g</td>
-<td align="left">生成必要的符号信息(调试时要用)</td>
+<td style="text-align:left">-g</td>
+<td style="text-align:left">生成必要的符号信息(调试时要用)</td>
 </tr>
 <tr>
-<td align="left">-m32</td>
-<td align="left">生成 32 位程序</td>
+<td style="text-align:left">-m32</td>
+<td style="text-align:left">生成 32 位程序</td>
 </tr>
 <tr>
-<td align="left">-I&lt;dir&gt;</td>
-<td align="left">添加头文件搜索目录</td>
+<td style="text-align:left">-I\<dir\></td>
+<td style="text-align:left">添加头文件搜索目录</td>
 </tr>
 <tr>
-<td align="left">-nostdinc</td>
-<td align="left">不使用标准库</td>
+<td style="text-align:left">-nostdinc</td>
+<td style="text-align:left">不使用标准库</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="4-2-gcc-与-g-的异同"><a href="#4-2-gcc-与-g-的异同" class="headerlink" title="4.2 gcc 与 g++的异同"></a>4.2 gcc 与 g++的异同</h3><p>有一说一,国内各个博客网站瞎抄严重(csdn,博客园,知乎,甚至包括 github pages)<br>最后在 stackoverflow 上找到了一个比较靠谱的回答:<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/172587/what-is-the-difference-between-g-and-gcc">[What is the difference between g++ and gcc? | stackoverflow]</a></p>
 <ul>
 <li>gcc 和 g++都是 GCC 的<strong>编译器驱动器</strong>,他们会根据具体的文件类型调用合适的编译器(可以使用-x language 显式指定语言)</li>

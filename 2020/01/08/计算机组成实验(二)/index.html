@@ -144,18 +144,16 @@
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/001.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机组成实验系列二</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-01-08T12:06:48.000Z" title="发表于 2020-01-08 20:06:48">2020-01-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:12:11.870Z" title="更新于 2021-02-09 11:12:11">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/">实践笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">985</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="基于流水线的-CPU"><a href="#基于流水线的-CPU" class="headerlink" title="基于流水线的 CPU"></a>基于流水线的 CPU</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/001.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bibibi的小站</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机组成实验系列二</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-01-08T12:06:48.000Z" title="发表于 2020-01-08 20:06:48">2020-01-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:12:11.870Z" title="更新于 2021-02-09 11:12:11">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/">实践笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">985</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="基于流水线的-CPU"><a href="#基于流水线的-CPU" class="headerlink" title="基于流水线的 CPU"></a>基于流水线的 CPU</h1><blockquote>
 <ol>
 <li>CPU 数据通路</li>
 <li>CPU 控制器</li>
 </ol>
 </blockquote>
 <a id="more"></a>
-
 <p><strong>github 项目地址:<a target="_blank" rel="noopener" href="https://github.com/yishiyu/mipscpu">https://github.com/yishiyu/mipscpu</a></strong></p>
 <h2 id="1-CPU-数据通路"><a href="#1-CPU-数据通路" class="headerlink" title="1. CPU 数据通路"></a>1. CPU 数据通路</h2><p>本 CPU 根据《数字设计和计算机体系结构》设计<br>参考的数据通路如下，同时在这个基础上增加了支持 J 指令的数据通路</p>
 <img src="http://img.yishiyu.world/blogs/images/计算机组成实验(二)/example.png">
-
 <h2 id="2-CPU-控制器"><a href="#2-CPU-控制器" class="headerlink" title="2. CPU 控制器"></a>2. CPU 控制器</h2><blockquote>
 <ol>
 <li>控制信号</li>
@@ -163,91 +161,99 @@
 <li>冒险检测与解决</li>
 </ol>
 </blockquote>
-<h3 id="2-1-控制信号"><a href="#2-1-控制信号" class="headerlink" title="2.1 控制信号"></a>2.1 控制信号</h3><table>
-<thead>
-<tr>
-<th align="center">输出引脚</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">RegWrite</td>
-<td align="center">当前指令需要写入寄存器</td>
-</tr>
-<tr>
-<td align="center">MemtoReg</td>
-<td align="center">当前指令需要从存储器中获取数据并存入寄存器</td>
-</tr>
-<tr>
-<td align="center">MemWrite</td>
-<td align="center">当前指令需要写入存储器</td>
-</tr>
-<tr>
-<td align="center">ALUCtrl</td>
-<td align="center">指定 ALU 运算类型</td>
-</tr>
-<tr>
-<td align="center">ALUSrc</td>
-<td align="center">ALU 中 B 数据来源选择(寄存器/立即数)</td>
-</tr>
-<tr>
-<td align="center">RegDst</td>
-<td align="center">寄存器写入目的指定,指定需要写入的寄存器(Rt/Rd)</td>
-</tr>
-<tr>
-<td align="center">BranchBEQ</td>
-<td align="center">当前指令为 BEQ 指令,需要在指令译码阶段判断是否跳转</td>
-</tr>
-<tr>
-<td align="center">BranchJ</td>
-<td align="center">当前指令为 J 指令,在指令译码阶段完成 J 跳转</td>
-</tr>
-</tbody></table>
-<h3 id="2-2-指令格式"><a href="#2-2-指令格式" class="headerlink" title="2.2 指令格式"></a>2.2 指令格式</h3><p>根据 MIPS 汇编指令的二进制码转换为对应的 ALU 操作指令<br>参考网址: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41848006/article/details/82256626">CSDN 博客</a></p>
+<h3 id="2-1-控制信号"><a href="#2-1-控制信号" class="headerlink" title="2.1 控制信号"></a>2.1 控制信号</h3><div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">ALU 操作码</th>
-<th align="center">运算</th>
-<th align="center">Func 码</th>
+<th style="text-align:center">输出引脚</th>
+<th style="text-align:center">作用</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">000</td>
-<td align="center">AND</td>
-<td align="center">100100</td>
+<tbody>
+<tr>
+<td style="text-align:center">RegWrite</td>
+<td style="text-align:center">当前指令需要写入寄存器</td>
 </tr>
 <tr>
-<td align="center">001</td>
-<td align="center">OR</td>
-<td align="center">100101</td>
+<td style="text-align:center">MemtoReg</td>
+<td style="text-align:center">当前指令需要从存储器中获取数据并存入寄存器</td>
 </tr>
 <tr>
-<td align="center">010</td>
-<td align="center">ADD</td>
-<td align="center">100000</td>
+<td style="text-align:center">MemWrite</td>
+<td style="text-align:center">当前指令需要写入存储器</td>
 </tr>
 <tr>
-<td align="center">011</td>
-<td align="center">SUB</td>
-<td align="center">100010</td>
+<td style="text-align:center">ALUCtrl</td>
+<td style="text-align:center">指定 ALU 运算类型</td>
 </tr>
 <tr>
-<td align="center">100</td>
-<td align="center">SLT</td>
-<td align="center">101010</td>
+<td style="text-align:center">ALUSrc</td>
+<td style="text-align:center">ALU 中 B 数据来源选择(寄存器/立即数)</td>
 </tr>
 <tr>
-<td align="center">110</td>
-<td align="center">NOR</td>
-<td align="center">100111</td>
+<td style="text-align:center">RegDst</td>
+<td style="text-align:center">寄存器写入目的指定,指定需要写入的寄存器(Rt/Rd)</td>
 </tr>
 <tr>
-<td align="center">111</td>
-<td align="center">XOR</td>
-<td align="center">100110</td>
+<td style="text-align:center">BranchBEQ</td>
+<td style="text-align:center">当前指令为 BEQ 指令,需要在指令译码阶段判断是否跳转</td>
 </tr>
-</tbody></table>
+<tr>
+<td style="text-align:center">BranchJ</td>
+<td style="text-align:center">当前指令为 J 指令,在指令译码阶段完成 J 跳转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-2-指令格式"><a href="#2-2-指令格式" class="headerlink" title="2.2 指令格式"></a>2.2 指令格式</h3><p>根据 MIPS 汇编指令的二进制码转换为对应的 ALU 操作指令<br>参考网址: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41848006/article/details/82256626">CSDN 博客</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ALU 操作码</th>
+<th style="text-align:center">运算</th>
+<th style="text-align:center">Func 码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">000</td>
+<td style="text-align:center">AND</td>
+<td style="text-align:center">100100</td>
+</tr>
+<tr>
+<td style="text-align:center">001</td>
+<td style="text-align:center">OR</td>
+<td style="text-align:center">100101</td>
+</tr>
+<tr>
+<td style="text-align:center">010</td>
+<td style="text-align:center">ADD</td>
+<td style="text-align:center">100000</td>
+</tr>
+<tr>
+<td style="text-align:center">011</td>
+<td style="text-align:center">SUB</td>
+<td style="text-align:center">100010</td>
+</tr>
+<tr>
+<td style="text-align:center">100</td>
+<td style="text-align:center">SLT</td>
+<td style="text-align:center">101010</td>
+</tr>
+<tr>
+<td style="text-align:center">110</td>
+<td style="text-align:center">NOR</td>
+<td style="text-align:center">100111</td>
+</tr>
+<tr>
+<td style="text-align:center">111</td>
+<td style="text-align:center">XOR</td>
+<td style="text-align:center">100110</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="2-3-冒险检测与解决"><a href="#2-3-冒险检测与解决" class="headerlink" title="2.3 冒险检测与解决"></a>2.3 冒险检测与解决</h3><ol>
 <li><p>已完成的指令</p>
 <blockquote>
