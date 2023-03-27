@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Linux学习笔记(一) | 遗世の私语</title><meta name="author" content="遗世雨"><meta name="copyright" content="遗世雨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Linux 基础知识  概述 文件系统 命令行工具 进程管理 网络管理 系统管理 包管理系统(主 Debian 系)">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Linux学习笔记(一): Linux 基础知识 | 遗世の私语</title><meta name="author" content="遗世雨"><meta name="copyright" content="遗世雨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="概述 文件系统 命令行工具 进程管理 网络管理 系统管理 包管理系统(主 Debian 系)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux学习笔记(一)">
+<meta property="og:title" content="Linux学习笔记(一): Linux 基础知识">
 <meta property="og:url" content="http://yishiyu.world/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="遗世の私语">
-<meta property="og:description" content="Linux 基础知识  概述 文件系统 命令行工具 进程管理 网络管理 系统管理 包管理系统(主 Debian 系)">
+<meta property="og:description" content="概述 文件系统 命令行工具 进程管理 网络管理 系统管理 包管理系统(主 Debian 系)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg">
 <meta property="article:published_time" content="2020-09-14T14:00:48.000Z">
-<meta property="article:modified_time" content="2021-02-09T03:13:27.605Z">
+<meta property="article:modified_time" content="2023-03-27T04:53:09.429Z">
 <meta property="article:author" content="遗世雨">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="Linux">
@@ -53,12 +53,12 @@
     rightside: false,
   }
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Linux学习笔记(一)',
+  title: 'Linux学习笔记(一): Linux 基础知识',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-02-09 11:13:27'
+  postUpdate: '2023-03-27 12:53:09'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -156,7 +156,7 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="遗世の私语"><span class="site-name">遗世の私语</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux学习笔记(一)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-14T14:00:48.000Z" title="发表于 2020-09-14 22:00:48">2020-09-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-09T03:13:27.605Z" title="更新于 2021-02-09 11:13:27">2021-02-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>30分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux学习笔记(一)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Linux-基础知识"><a href="#Linux-基础知识" class="headerlink" title="Linux 基础知识"></a>Linux 基础知识</h1><blockquote>
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Hiki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="遗世の私语"><span class="site-name">遗世の私语</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux学习笔记(一): Linux 基础知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-14T14:00:48.000Z" title="发表于 2020-09-14 22:00:48">2020-09-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-27T04:53:09.429Z" title="更新于 2023-03-27 12:53:09">2023-03-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>30分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux学习笔记(一): Linux 基础知识"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
 <ol>
 <li>概述</li>
 <li>文件系统</li>
@@ -424,31 +424,31 @@
 <td style="text-align:left">ls -alF 的缩写(列出所有文件,输出详细信息,附上说明字符)</td>
 </tr>
 <tr>
-<td style="text-align:left">cd \<dir\></td>
+<td style="text-align:left">cd dir</td>
 <td style="text-align:left">change directory,改变工作目录(即当前所在目录)</td>
 </tr>
 <tr>
-<td style="text-align:left">cp \<file1\> \<file2\></td>
+<td style="text-align:left">cp file1 file2</td>
 <td style="text-align:left">copy,复制 file1 到 file2 的位置</td>
 </tr>
 <tr>
-<td style="text-align:left">cp \<file1\> \<file2\> \<dir\></td>
+<td style="text-align:left">cp file1 file2 dir</td>
 <td style="text-align:left">复制 file1,file2 到目录 dir 中</td>
 </tr>
 <tr>
-<td style="text-align:left">touch \<file\></td>
+<td style="text-align:left">touch file</td>
 <td style="text-align:left">创建新文件</td>
 </tr>
 <tr>
-<td style="text-align:left">mkdir \<dir\></td>
+<td style="text-align:left">mkdir dir</td>
 <td style="text-align:left">make directory,创建新文件夹</td>
 </tr>
 <tr>
-<td style="text-align:left">rm [-rf] \<file/dir></td>
+<td style="text-align:left">rm [-rf] file/dir</td>
 <td style="text-align:left">remove,删除文件,-r:递归删除文件夹,-f 忽略不存在的文件和参数</td>
 </tr>
 <tr>
-<td style="text-align:left">rmdir \<dir\></td>
+<td style="text-align:left">rmdir dir</td>
 <td style="text-align:left">remove directory,删除空文件夹,可以用 rm 代替,很木大的一个命令</td>
 </tr>
 </tbody>
@@ -685,49 +685,21 @@
 <li>stdin 与 stdout 可以利用减号 “-“ 来替代</li>
 </ol>
 <h3 id="3-4-指令的连续执行"><a href="#3-4-指令的连续执行" class="headerlink" title="3.4 指令的连续执行"></a>3.4 指令的连续执行</h3><ol>
-<li>单行指令拆分成多行</li>
-</ol>
+<li><p>单行指令拆分成多行</p>
 <p>如果一行写不下指令发生折叠,会影响视觉效果,可以通过”\”符号对指令进行分割,行之间无缝连接</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ echo \</span><br><span class="line">&gt; the first line \</span><br><span class="line">&gt; the second line \</span><br><span class="line">&gt; &gt; testfile</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ ls</span><br><span class="line">testfile</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ cat testfile</span><br><span class="line">the first line the second line</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$</span><br></pre></td></tr></table></figure>
-<ol>
-<li>按照一定逻辑连续执行指令</li>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ <span class="built_in">echo</span> \</span><br><span class="line">&gt; the first line \</span><br><span class="line">&gt; the second line \</span><br><span class="line">&gt; &gt; testfile</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ ls</span><br><span class="line">testfile</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$ cat testfile</span><br><span class="line">the first line the second line</span><br><span class="line">yishiyu@yishiyu-Lenovo:~/Code/test$</span><br></pre></td></tr></table></figure></li>
+<li><p>按照一定逻辑连续执行指令</p>
+<ul>
+<li><code>;</code>: 无条件执行, <code>sync; sync; shutdown -h now</code></li>
+<li><code>&amp;&amp;</code>: 前一条指令成功, <code>ls /tmp/abc &amp;&amp; touch /tmp/abc/hehe</code></li>
+<li><code>||</code>: 前一条指令失败, <code>ls /tmp/abc \|\| mkdir /tmp/abc</code></li>
+</ul>
+</li>
 </ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">连接符号</th>
-<th style="text-align:left">逻辑</th>
-<th style="text-align:left">示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">;</td>
-<td style="text-align:left">无条件执行</td>
-<td style="text-align:left">sync; sync; shutdown -h now</td>
-</tr>
-<tr>
-<td style="text-align:left">&amp;&amp;</td>
-<td style="text-align:left">前一条指令成功</td>
-<td style="text-align:left">ls /tmp/abc &amp;&amp; touch /tmp/abc/hehe</td>
-</tr>
-<tr>
-<td style="text-align:left">\</td>
-<td style="text-align:left">\</td>
-<td style="text-align:left"></td>
-<td>前一条指令失败</td>
-<td>ls /tmp/abc \</td>
-<td>\</td>
-<td>mkdir /tmp/abc</td>
-</tr>
-</tbody>
-</table>
-</div>
 <h2 id="4-进程管理"><a href="#4-进程管理" class="headerlink" title="4. 进程管理"></a>4. 进程管理</h2><h3 id="4-1-进程的观察"><a href="#4-1-进程的观察" class="headerlink" title="4.1 进程的观察"></a>4.1 进程的观察</h3><h4 id="静态观察"><a href="#静态观察" class="headerlink" title="静态观察"></a>静态观察</h4><p>使用 ps 指令可以观察一个瞬间时所有进程的状态<br>ps 指令的 man 手册比较乱(因为要兼顾不同系统)<br>所以直接背两个固定的套路是比较不错的</p>
-<ol>
+<ul>
 <li>仅观察自己的 bash 相关进程: ps -l</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -772,9 +744,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>观察系统所有进程:ps aux</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -869,17 +841,17 @@
 </table>
 </div>
 <ol>
-<li>kill 指令(向进程发送信号)</li>
-</ol>
+<li><p>kill 指令(向进程发送信号)</p>
 <blockquote>
 <p>kill -s Signal PID<br>-s: 指定信号<br>PID: 指定进程 PID<br>例子:<br>kill -9 4300<br>强制终止 PID 为 4300 的进程</p>
 </blockquote>
-<ol>
-<li>killall 指令(指定名称发送信号)</li>
-</ol>
+</li>
+<li><p>killall 指令(指定名称发送信号)</p>
 <blockquote>
 <p>killall [-egiqvw] [-signal] name<br>-e: 对于超过 15 个字符的名字,killall 命令默认是只匹配前 15 个字符,-e 要求强制全部匹配<br>-g: 杀死属于改进承租的进程<br>-i: 交互方式运行,在杀死进程之前需要交互式确认<br>-l: 列出所有已知的信号名<br>-q: 如果没有进程杀死,不会提出抱怨<br>-v: 报告信号是否成功杀死<br>-V: 显示版本信息<br>-w: 确认所有被杀进程死去(未响应进程和僵尸进程可能会导致永久等待)</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="4-3-服务的管理"><a href="#4-3-服务的管理" class="headerlink" title="4.3 服务的管理"></a>4.3 服务的管理</h3><p>一种特殊的进程叫做 deamon 进程(后台守护进程),一般的服务都是以后台进程的方式实现的<br>对服务的管理一般通过 systemctl 这个命令完成</p>
 <blockquote>
 <p>systemctl [command] [unit]<br>command 主要有:<br>start :立刻启动后面接的 unit<br>stop :立刻关闭后面接的 unit<br>restart :立刻关闭后启动后面接的 unit,亦即执行 stop 再 start 的意思<br>reload :不关闭后面接的 unit 的情况下,重载配置文件,让设定生效<br>enable :设定下次开机时,后面接的 unit 会被启动<br>disable :设定下次开机时,后面接的 unit 不会被启动<br>status :目前后面接的这个 unit 的状态,会列出有没有正在执行、开机预设执行否、登录等信息等!<br>is-active :目前有没有正在运作中<br>is-enable :开机时有没有预设要启用这个 unit</p>
@@ -932,38 +904,35 @@
 <p>所以直接略过 iptables(可以参照&lt;&lt;\Linux 就该这么学&gt;&gt;)</p>
 <p>参考链接:<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/23519454">[Firewalld 详解 | 知乎]</a><br><a target="_blank" rel="noopener" href="https://www.linuxprobe.com/centos-firewalld.html">[FirewallD 入门手册 | Linux 中国]</a></p>
 <h2 id="6-系统管理"><a href="#6-系统管理" class="headerlink" title="6. 系统管理"></a>6. 系统管理</h2><h3 id="6-1-账号管理"><a href="#6-1-账号管理" class="headerlink" title="6.1 账号管理"></a>6.1 账号管理</h3><h4 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h4><ol>
-<li>用户创建(会同时创建一个同名组)</li>
-</ol>
+<li><p>用户创建(会同时创建一个同名组)</p>
 <blockquote>
 <p>useradd [-u UID] [-g 初始群组] [-G 次要群组] [-mM] &gt; [-c 说明栏] [-d 家目录绝对路径] [-s shell] 使用者账号名<br>选项与参数:<br>-u :后面接的是 UID ,是一组数字。直接指定一个特定的 UID 给这个账号;<br>-g :后面接的那个组名就是我们上面提到的 initial group 啦~<br>该群组的 GID 会被放置到 /etc/passwd 的第四个字段内。<br>-G :后面接的组名则是这个账号还可以加入的群组。这个选项与参数会修改 /etc/group 内的相关资料喔!<br>-M :强制!不要建立用户家目录!(系统账号默认值)<br>-m :强制!要建立用户家目录!(一般账号默认值)<br>-c :这个就是 /etc/passwd 的第五栏的说明内容啦~可以随便我们设定的啦~<br>-d :指定某个目录成为家目录,而不要使用默认值。务必使用绝对路径!<br>-r :建立一个系统的账号,这个账号的 UID 会有限制 (参考 /etc/login.defs)<br>-s :后面接一个 shell ,若没有指定则预设是 /bin/bash 的啦~<br>-e :后面接一个日期,格式为『YYYY-MM-DD』此项目可写入 shadow 第八字段,亦即账号失效日的设定项目啰;<br>-f :后面接 shadow 的第七字段项目,指定密码是否会失效。<br>0 为立刻失效,-1 为永远不失效(密码只会过期而强制于登入时重新设定而已。)</p>
 <blockquote>
 <p>创建新用户时系统的行为:<br>在 /etc/passwd 里面建立一行与账号相关的数据,包括建立 UID/GID/家目录等;<br>在 /etc/shadow 里面将此账号的密码相关参数填入,但是尚未有密码(手动设置密码后会有加密后的密码);<br>在 /etc/group 里面加入一个与账号名称一模一样的组名;<br>在 /home 底下建立一个与账号同名的目录作为用户家目录,且权限为 700</p>
 </blockquote>
 </blockquote>
-<ol>
-<li>修改/设置密码</li>
-</ol>
+</li>
+<li><p>修改/设置密码</p>
 <blockquote>
 <p>普通用户可以修改自己的密码,root 用户可以在不知道用户密码时修改其密码<br>passwd [—stdin] [账号名称]<br>passwd [-l] [-u] [—stdin] [-S] [-n 日数] [-x 日数] [-w 日数] [-i 日期] 账号<br>选项与参数:<br>—stdin :可以透过来自前一个管线的数据,作为密码输入,对 shell script 有帮助!<br>-l :是 Lock 的意思,会将 /etc/shadow 第二栏最前面加上 ! 使密码失效;<br>-u :与 -l 相对,是 Unlock 的意思!<br>-S :列出密码相关参数,亦即 shadow 文件内的大部分信息。<br>-n :后面接天数,shadow 的第 4 字段,多久不可修改密码天数<br>-x :后面接天数,shadow 的第 5 字段,多久内必须要更动密码<br>-w :后面接天数,shadow 的第 6 字段,密码过期前的警告天数<br>-i :后面接『日期』,shadow 的第 7 字段,密码失效日期</p>
 </blockquote>
-<ol>
-<li>查看用户信息</li>
-</ol>
+</li>
+<li><p>查看用户信息</p>
 <blockquote>
 <p>id [选项]… [用户]</p>
 </blockquote>
-<ol>
-<li>修改用户信息</li>
-</ol>
+</li>
+<li><p>修改用户信息</p>
 <blockquote>
 <p>usermod [-cdegGlsuLU] username<br>选项与参数:<br>-c :后面接账号的说明,即 /etc/passwd 第五栏的说明栏,可以加入一些账号的说明。<br>-d :后面接账号的家目录,即修改 /etc/passwd 的第六栏;<br>-e :后面接日期,格式是 YYYY-MM-DD 也就是在 /etc/shadow 内的第八个字段数据啦!<br>-f :后面接天数,为 shadow 的第七字段。<br>-g :后面接初始群组,修改 /etc/passwd 的第四个字段,亦即是 GID 的字段!<br>-G :后面接次要群组,修改这个使用者能够支持的群组,修改的是 /etc/group 啰~<br>-a :与 -G 合用,可『增加次要群组的支持』而非『设定』喔!<br>-l :后面接账号名称。亦即是修改账号名称, /etc/passwd 的第一栏!<br>-s :后面接 Shell 的实际文件,例如 /bin/bash 或 /bin/csh 等等。<br>-u :后面接 UID 数字啦!即 /etc/passwd 第三栏的资料;<br>-L :暂时将用户的密码冻结,让他无法登入。其实仅改 /etc/shadow 的密码栏。<br>-U :将 /etc/shadow 密码栏的 ! 拿掉,解冻啦!</p>
 </blockquote>
-<ol>
-<li>删除用户</li>
-</ol>
+</li>
+<li><p>删除用户</p>
 <blockquote>
 <p>userdel [-r] username<br>选项与参数:<br>-r :连同用户的家目录也一起删除</p>
 </blockquote>
+</li>
+</ol>
 <h4 id="为新用户添加-root-权限"><a href="#为新用户添加-root-权限" class="headerlink" title="为新用户添加 root 权限"></a>为新用户添加 root 权限</h4><p>需要注意的是,建立完用户后,用户默认是无法使用 root 权限的<br>在执行 sudo 命令的时候,Linux 会首先在/etc/sudoers 这个文件中查找当前用户是否拥有 root 权限</p>
 <p>可以使用 sudo vim /etc/sudoers 也可以使用 sudo visudo 这个命令对配置文件进行修改</p>
 <p>使用者账号 登入者的来源主机名=(可切换的身份) 可下达的指令<br>root ALL=(ALL) ALL<br>同时可以给一个组赋予权限,使得该组内所有用户都拥有该权限(%代表该名称为组)<br>%wheel ALL=(ALL) ALL<br>可以给该用户限定 sudo 执行的命令(必须用绝对路径表示)<br>user ALL=(root) !/usr/bin/passwd, /usr/bin/passwd [A-Za-z]*, !/usr/bin/passwd root</p>
@@ -994,66 +963,60 @@
 <p>默认情况下,只有 root 用户拥有管理员权限,其他用户无法使用 su 和 sudo 命令获取到管理员权限</p>
 <p>需要注意的是 su 单独使用和 su user 只切换到目标用户身份,但不加载该用户的环境配置(即 nologin shell)<br>-和-l 两个参数(其实都是—login 的缩写)切换身份的同时加载该用户的环境配置(即 login shell)</p>
 <h4 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h4><ol>
-<li>添加组</li>
-</ol>
+<li><p>添加组</p>
 <blockquote>
 <p>groupadd [-g gid] [-r] 组名<br>选项与参数:<br>-g :后面接某个特定的 GID ,用来直接给予某个 GID ~<br>-r :建立系统群组啦!与 /etc/login.defs 内的 GID_MIN 有关。</p>
 </blockquote>
-<ol>
-<li>修改组信息</li>
-</ol>
+</li>
+<li><p>修改组信息</p>
 <blockquote>
 <p>groupmod [-g gid] [-n group_name] 群组名<br>选项与参数:<br>-g :修改既有的 GID 数字;<br>-n :修改既有的组名</p>
 </blockquote>
-<ol>
-<li>删除组</li>
-</ol>
+</li>
+<li><p>删除组</p>
 <blockquote>
 <p>groupdel [groupname]</p>
 </blockquote>
-<ol>
-<li>组管理</li>
-</ol>
+</li>
+<li><p>组管理</p>
 <blockquote>
 <p>gpasswd groupname: 设置组管理密码<br>gpasswd [-A user1,…] groupname: 指定组管理员<br>gpasswd [-ad] user groupname: 添加/删除组成员</p>
 </blockquote>
-<h3 id="6-2-资源管理"><a href="#6-2-资源管理" class="headerlink" title="6.2 资源管理"></a>6.2 资源管理</h3><ol>
-<li>检测内存的使用情况</li>
+</li>
 </ol>
+<h3 id="6-2-资源管理"><a href="#6-2-资源管理" class="headerlink" title="6.2 资源管理"></a>6.2 资源管理</h3><ol>
+<li><p>检测内存的使用情况</p>
 <blockquote>
 <p>free [-b|-k|-m|-g|-h] [-t] [-s N -c N]<br>选项与参数:<br>-b:直接输入 free 时,显示的单位是 Kbytes,可以让系统自己指定你单位(-h)<br>也可以使用 b(bytes), m(Mbytes), k(Kbytes), g(Gbytes) 指定单位<br>-t :在输出的最终结果,显示物理内存与 swap 的总量。<br>-s :可以让系统每几秒钟输出一次,不间断的一直输出的意思!对于系统观察挺有效!<br>-c :与 -s 同时处理~让 free 列出几次的意思~</p>
 </blockquote>
-<ol>
-<li>查阅系统信息</li>
-</ol>
+</li>
+<li><p>查阅系统信息</p>
 <blockquote>
 <p>uname [-asrmpi]<br>选项与参数:<br>-a :所有系统相关的信息,包括底下的数据都会被列出来;<br>-s :系统核心名称<br>-r :核心的版本<br>-m :本系统的硬件名称,例如 i686 或 x86_64 等;<br>-p :CPU 的类型,与 -m 类似,只是显示的是 CPU 的类型!<br>-i :硬件的平台 (ix86)</p>
 <p>也可以使用 screenfetch 命令<br>其输出带发行版 logo 的系统信息(非常好看)</p>
 </blockquote>
-<ol>
-<li>观察系统启动时间与工作负载</li>
-</ol>
+</li>
+<li><p>观察系统启动时间与工作负载</p>
 <blockquote>
 <p>uptime<br>这个命令显示的和 top 命令最上面一行的内容是一样的</p>
 </blockquote>
-<ol>
-<li>查看网络和 socket 文件</li>
-</ol>
+</li>
+<li><p>查看网络和 socket 文件</p>
 <blockquote>
 <p>netstat -[atunlp]<br>选项与参数:<br>-a :将目前系统上所有的联机、监听、Socket 数据都列出来<br>-t :列出 tcp 网络封包的数据<br>-u :列出 udp 网络封包的数据<br>-n :不以进程的服务名称,以埠号 (port number) 来显示;<br>-l :列出目前正在网络监听 (listen) 的服务;<br>-p :列出该网络服务的进程 PID</p>
 </blockquote>
-<ol>
-<li>分析核心信息</li>
-</ol>
+</li>
+<li><p>分析核心信息</p>
 <blockquote>
 <p>dmesg</p>
 </blockquote>
-<ol>
-<li>监测系统资源变化</li>
-</ol>
+</li>
+<li><p>监测系统资源变化</p>
 <blockquote>
 <p>vmstat [-n] [延时[次数]]<br>还有一些其他的参数,但是一般只用这个就够了</p>
 </blockquote>
+</li>
+</ol>
 <h3 id="6-3-SELinux"><a href="#6-3-SELinux" class="headerlink" title="6.3 SELinux"></a>6.3 SELinux</h3><p>SELinux 即 Security Enhanced Linux(安全附魔 Linux…)<br>主要是为系统安全服务的一个模块</p>
 <p>原本一个进程访问一个资源仅看其是否有权限<br>在 SELinux 中附加条件为其是否需要该资源</p>
 <p>暂时用不到,所以先不学(到时候也得忘)</p>
@@ -1094,9 +1057,9 @@
 <blockquote>
 <p>现在推出了一个 apt 命令,但是感觉还是 apt-get 好用一点<br>Linux 中国在知乎上的文章对 apt 的描述是显示彩色的进度条(笑死我了哈哈哈哈)</p>
 </blockquote>
-<h4 id="7-1-2-命令总结"><a href="#7-1-2-命令总结" class="headerlink" title="7.1.2 命令总结"></a>7.1.2 命令总结</h4><ol>
+<h4 id="7-1-2-命令总结"><a href="#7-1-2-命令总结" class="headerlink" title="7.1.2 命令总结"></a>7.1.2 命令总结</h4><ul>
 <li>安装软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1117,9 +1080,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>卸载软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1144,9 +1107,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>搜索软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1175,9 +1138,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>dpkg 命令</li>
-</ol>
+</ul>
 <blockquote>
 <p>dpkg 命令为底层命令,可以安装本地 deb 包</p>
 </blockquote>
@@ -1237,9 +1200,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>apt 命令</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1341,9 +1304,9 @@
 <p>yum==Yellow dog Updater, Modified (可真是够奇怪的…)<br>rpm==The RPM Package Manager(真就套娃呗…)</p>
 <p>参考链接:<br><a target="_blank" rel="noopener" href="https://wangchujiang.com/linux-command/c/yum.html">yum 的用法</a><br>虽然 Ubuntu 本身没 yum(也不适合用 yum 安装东西)<br>但是可以通过 docker 运行一个 centos 镜像来体验一下 yum</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -it centos</span><br></pre></td></tr></table></figure>
-<h4 id="7-2-2-命令总结"><a href="#7-2-2-命令总结" class="headerlink" title="7.2.2 命令总结"></a>7.2.2 命令总结</h4><ol>
+<h4 id="7-2-2-命令总结"><a href="#7-2-2-命令总结" class="headerlink" title="7.2.2 命令总结"></a>7.2.2 命令总结</h4><ul>
 <li>安装软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1368,9 +1331,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>卸载软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1387,9 +1350,9 @@
 </tbody>
 </table>
 </div>
-<ol>
+<ul>
 <li>搜索软件</li>
-</ol>
+</ul>
 <div class="table-container">
 <table>
 <thead>
@@ -1429,4 +1392,4 @@
 <p>同 APT 体系的 dpkg 一样,yum 体系也有底层的 rpm 工具,但是其用的比较少<br>(毕竟 yum 能直接处理本地包)</p>
 <h4 id="7-2-3-镜像源管理"><a href="#7-2-3-镜像源管理" class="headerlink" title="7.2.3 镜像源管理"></a>7.2.3 镜像源管理</h4><p>yum 的镜像源文件为/etc/yum.repos.d/CentOS-Base.repo<br>与 apt 类似,就不再写了(懒.jpg)<br>换国内源的办法可以自行搜索</p>
 <p>yum 用的比较少,先写这么多,以后用到了再看</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://yishiyu.world">遗世雨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yishiyu.world/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/">http://yishiyu.world/2020/09/14/Linux学习笔记(一)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yishiyu.world" target="_blank">遗世の私语</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/" title="Linux学习笔记(三)"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(三)</div></div></a></div><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" title="Linux学习笔记(二)"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(二)</div></div></a></div><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)/" title="Linux学习笔记(四)"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(四)</div></div></a></div><div><a href="/2020/09/20/ShellScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="ShellScript学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/016.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-20</div><div class="title">ShellScript学习笔记</div></div></a></div><div><a href="/2020/09/18/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/011.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">Docker学习笔记</div></div></a></div><div><a href="/2020/10/19/GNU%E5%B7%A5%E5%85%B7%E9%93%BE%E7%B3%BB%E5%88%97(%E4%B8%80)/" title="GNU工具链系列(一)"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/002.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-19</div><div class="title">GNU工具链系列(一)</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">Linux 基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1. 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Linux-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-text">1.2 Linux 文件系统结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">2. 文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">2.1 文件权限系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2 文件管理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E6%99%AE%E9%80%9A%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.1 普通管理命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.2 权限管理命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-text">2.3 压缩与解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">2.3.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-gzip-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.2 gzip 格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-zip-%E6%A0%BC%E5%BC%8F%E5%92%8C-rar-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.3 zip 格式和 rar 格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-tar-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.4 tar 格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-text">3. 命令行工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%98%BE%E7%A4%BA%E5%B7%A5%E5%85%B7"><span class="toc-text">3.1 显示工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-text">3.2 通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93"><span class="toc-text">3.3 重定向和管道</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93"><span class="toc-text">管道</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%8C%87%E4%BB%A4%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%89%A7%E8%A1%8C"><span class="toc-text">3.4 指令的连续执行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">4. 进程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%A7%82%E5%AF%9F"><span class="toc-text">4.1 进程的观察</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%A7%82%E5%AF%9F"><span class="toc-text">静态观察</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%82%E5%AF%9F"><span class="toc-text">动态观察</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-text">4.2 进程的管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-text">4.3 服务的管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86"><span class="toc-text">5. 网络管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">5.1 网络基本命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BD%91%E7%BB%9C%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">5.2 网络防火墙设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86"><span class="toc-text">6. 系统管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86"><span class="toc-text">6.1 账号管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E6%96%B0%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0-root-%E6%9D%83%E9%99%90"><span class="toc-text">为新用户添加 root 权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#su-%E5%92%8C-sudo-%E5%91%BD%E4%BB%A4"><span class="toc-text">su 和 sudo 命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86"><span class="toc-text">组管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">6.2 资源管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-SELinux"><span class="toc-text">6.3 SELinux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-%E4%B8%BB-Debian-%E7%B3%BB"><span class="toc-text">7. 包管理系统(主 Debian 系)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-apt-%E4%BD%93%E7%B3%BB"><span class="toc-text">7.1 apt 体系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">7.1.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-2-%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93"><span class="toc-text">7.1.2 命令总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-3-%E9%95%9C%E5%83%8F%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">7.1.3 镜像源管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-yum-%E4%BD%93%E7%B3%BB"><span class="toc-text">7.2 yum 体系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">7.2.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-2-%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93"><span class="toc-text">7.2.2 命令总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-3-%E9%95%9C%E5%83%8F%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">7.2.3 镜像源管理</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By 遗世雨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png"><span>陕ICP备20012321号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://yishiyu.world">遗世雨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yishiyu.world/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/">http://yishiyu.world/2020/09/14/Linux学习笔记(一)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yishiyu.world" target="_blank">遗世の私语</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" title="Linux学习笔记(二): Tmux 学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(二): Tmux 学习笔记</div></div></a></div><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%9B%9B)/" title="Linux学习笔记(四): 终端美化系列(zsh+ohmyzsh)"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(四): 终端美化系列(zsh+ohmyzsh)</div></div></a></div><div><a href="/2020/09/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)/" title="Linux学习笔记(三): Vim 学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-14</div><div class="title">Linux学习笔记(三): Vim 学习笔记</div></div></a></div><div><a href="/2020/09/20/ShellScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="ShellScript学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/016.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-20</div><div class="title">ShellScript学习笔记</div></div></a></div><div><a href="/2020/10/19/GNU%E5%B7%A5%E5%85%B7%E9%93%BE%E7%B3%BB%E5%88%97(%E4%B8%80)/" title="GNU工具链系列(一): Makefile 编译工具"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/002.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-19</div><div class="title">GNU工具链系列(一): Makefile 编译工具</div></div></a></div><div><a href="/2020/09/18/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记"><img class="cover" src="http://img.yishiyu.world/blogs/cover/post/20210208/011.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">Docker学习笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1. 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">1.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Linux-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-text">1.2 Linux 文件系统结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">2. 文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">2.1 文件权限系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2 文件管理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E6%99%AE%E9%80%9A%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.1 普通管理命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.2 权限管理命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-text">2.3 压缩与解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">2.3.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-gzip-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.2 gzip 格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-zip-%E6%A0%BC%E5%BC%8F%E5%92%8C-rar-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.3 zip 格式和 rar 格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-4-tar-%E6%A0%BC%E5%BC%8F"><span class="toc-text">2.3.4 tar 格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-text">3. 命令行工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%98%BE%E7%A4%BA%E5%B7%A5%E5%85%B7"><span class="toc-text">3.1 显示工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-text">3.2 通配符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93"><span class="toc-text">3.3 重定向和管道</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93"><span class="toc-text">管道</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%8C%87%E4%BB%A4%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%89%A7%E8%A1%8C"><span class="toc-text">3.4 指令的连续执行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">4. 进程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%BF%9B%E7%A8%8B%E7%9A%84%E8%A7%82%E5%AF%9F"><span class="toc-text">4.1 进程的观察</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%A7%82%E5%AF%9F"><span class="toc-text">静态观察</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%82%E5%AF%9F"><span class="toc-text">动态观察</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-text">4.2 进程的管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-text">4.3 服务的管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86"><span class="toc-text">5. 网络管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">5.1 网络基本命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BD%91%E7%BB%9C%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">5.2 网络防火墙设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86"><span class="toc-text">6. 系统管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86"><span class="toc-text">6.1 账号管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E6%96%B0%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0-root-%E6%9D%83%E9%99%90"><span class="toc-text">为新用户添加 root 权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#su-%E5%92%8C-sudo-%E5%91%BD%E4%BB%A4"><span class="toc-text">su 和 sudo 命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86"><span class="toc-text">组管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">6.2 资源管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-SELinux"><span class="toc-text">6.3 SELinux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-%E4%B8%BB-Debian-%E7%B3%BB"><span class="toc-text">7. 包管理系统(主 Debian 系)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-apt-%E4%BD%93%E7%B3%BB"><span class="toc-text">7.1 apt 体系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">7.1.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-2-%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93"><span class="toc-text">7.1.2 命令总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-3-%E9%95%9C%E5%83%8F%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">7.1.3 镜像源管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-yum-%E4%BD%93%E7%B3%BB"><span class="toc-text">7.2 yum 体系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-1-%E6%A6%82%E8%BF%B0"><span class="toc-text">7.2.1 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-2-%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93"><span class="toc-text">7.2.2 命令总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-3-%E9%95%9C%E5%83%8F%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-text">7.2.3 镜像源管理</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By 遗世雨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png"><span>陕ICP备20012321号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
